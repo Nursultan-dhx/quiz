@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Blackberry';
+    src: url('/src/fonts/blackberry-normal_version_02.otf') format('truetype');
+}
+
+.blackberry {
+    font-family: 'Blackberry', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}

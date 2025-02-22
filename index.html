@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+  </head>
+  <body class="text-white bg-gray-100 flex flex-col min-h-screen">
+
+    <section id="hero" class="min-h-screen bg-cover bg-center flex justify-center items-center" style="background-image: url('src/img/hero.png');">
+        <!-- Game Title -->
+        <div id="game-start" class="container flex flex-col items-center">
+            <img class="w-3xs h-3xs rounded-full overflow-hidden" src="./src/img/logo.png" alt="Game Logo"/>
+            <h1 class="blackberry text-[12rem] font-light">Территория досуга</h1>
+            <button class="bg-sky-500 text-6xl w-md py-4 rounded-full font-semibold" onclick="showRules()">Начать игру</button>
+        </div>
+
+        <!-- Game Rules -->
+        <div id="game-rules" class="hidden container text-center flex flex-col justify-between min-h-screen p-10">
+            <div class="w-full text-left">
+                <h2 class="blackberry text-9xl font-light text-center mb-6">Правила игры</h2>
+                <ol class="list-decimal pl-9 text-6xl/18 font-medium">
+                    <li>Наличие отличного настроения обязательно</li>
+                    <li>5 раундов, на каждый раунд даётся определённое время</li>
+                    <li>Пользоваться мобильными телефонами строго запрещено!!!</li>
+                </ol>
+            </div>
+            <div class="flex flex-col items-center gap-y-8">
+                <p class="text-7xl font-semibold text-center">Главное не победа, а участие!</p>
+                <button class="bg-sky-500 text-6xl w-md py-4 rounded-full font-semibold" onclick="showGoodLuck()">Далее</button>
+            </div>    
+        </div>
+
+        <!-- Message -->
+        <div id="good-luck" class="hidden container flex flex-col items-center gap-y-10">
+            <img class="w-3xs h-3xs rounded-full overflow-hidden" src="./src/img/logo.png" alt="Game Logo"/>
+            <h1 class="blackberry text-center text-8xl font-light">Желаем командам - удачи!<br> Мы начинаем!!!</h1>
+            <button class="bg-sky-500 text-6xl w-2xl py-4 rounded-full font-semibold" onclick="showRound1()">Перейти к 1 раунду</button>
+        </div>
+    </section>
+    <audio id="background-music" loop>
+      <source src="src/audio/quiz.m4a" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <section id="round1" class="hidden min-h-screen bg-cover bg-center flex justify-center items-center" style="background-image: url('src/img/hero-round1.png');">
+        <!-- Round 1 Introduction -->
+        <div id="round1-intro" class="hidden container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-9xl font-light uppercase">1 раунд</h1>
+            <h1 class="blackberry text-center text-[12rem] font-light">Территория досуга</h1>
+            <button class="bg-teal-700 text-6xl w-3xl py-4 rounded-full font-semibold" onclick="startRound1()">Начать первый раунд</button>
+        </div>
+
+        <!-- Round 1 -->
+        <div id="round1-question" class="hidden container text-center">
+            <h1 class="blackberry text-center text-9xl font-light">1 вопрос</h1>
+            <p class="mb-4 text-6xl font-medium">Какая из перечисленных видов деятельности является массовой формой досуга?</p>
+            <div class="grid grid-cols-2 gap-10 my-15">
+                <button class="bg-teal-700 text-4xl w-full py-4 rounded-xl font-semibold">Просмотр телевизора</button>
+                <button id="correct-answer" class="bg-teal-700 text-4xl w-full py-4 rounded-xl font-semibold">Хорошее пение</button>
+                <button class="bg-teal-700 text-4xl w-full py-4 rounded-xl font-semibold">Игра в шахматы</button>
+                <button class="bg-teal-700 text-4xl w-full py-4 rounded-xl font-semibold">Занятие живописью</button>
+            </div>
+            <div class="flex justify-center items-center gap-x-4">
+                <div id="timer" class="text-4xl font-bold">0:30</div>
+                <button onclick="startTimer()" class="bg-teal-700 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
+            </div>
+        </div>
+    </section>
+    <script>
+      function showRules() {
+        document.getElementById('game-start').classList.add('hidden');
+        document.getElementById('game-rules').classList.remove('hidden');
+      }
+
+      function showGoodLuck() {
+        document.getElementById('game-rules').classList.add('hidden');
+        document.getElementById('good-luck').classList.remove('hidden');
+      }
+
+      function showRound1() {
+        document.getElementById('good-luck').classList.add('hidden');
+        document.getElementById('round1-intro').classList.remove('hidden');
+        document.getElementById('hero').classList.add('hidden');
+        document.getElementById('round1').classList.remove('hidden');
+      }
+
+      function startRound1() {
+        document.getElementById('round1-intro').classList.add('hidden');
+        document.getElementById('round1-question').classList.remove('hidden');
+      }
+
+    function startTimer() {
+      let timer = 29;
+      const timerElement = document.getElementById('timer');
+      const backgroundMusic = document.getElementById('background-music');
+      backgroundMusic.play();
+      timerElement.textContent = `0:${timer < 10 ? '0' : ''}${timer}`;
+      const interval = setInterval(() => {
+        timer--;
+        timerElement.textContent = `0:${timer < 10 ? '0' : ''}${timer}`;
+        if (timer === 0) {
+        clearInterval(interval);
+        highlightCorrectAnswer();
+        backgroundMusic.pause();
+        }
+      }, 1000);
+    }
+
+    function highlightCorrectAnswer() {
+      const correctAnswer = document.getElementById('correct-answer');
+      correctAnswer.classList.remove('bg-teal-700');
+      correctAnswer.classList.add('bg-green-500');
+    }
+
+    // Play background music
+    document.addEventListener('DOMContentLoaded', () => {
+      const backgroundMusic = document.getElementById('background-music');
+      backgroundMusic.play();
+    });
+
+    </script>
+  </body>
+</html>
