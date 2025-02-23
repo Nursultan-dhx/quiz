@@ -92,13 +92,49 @@ function showRound2() {
     document.getElementById('round2').classList.remove('hidden');
 }
 
-function startRound2Question1() { // Renamed function
+function startRound2Question1() { 
     document.getElementById('round2-intro').classList.add('hidden');
     document.getElementById('round2-question#1').classList.remove('hidden');
 }
 
-function startTimer(timerId, startBtnId, showAnswerBtnId) {
-  let timer = 1;
+function startRound2Question2() { 
+    document.getElementById('round2-question#1').classList.add('hidden');
+    document.getElementById('round2-question#2').classList.remove('hidden');
+}
+
+function startRound2Question3() { 
+    document.getElementById('round2-question#2').classList.add('hidden');
+    document.getElementById('round2-question#3').classList.remove('hidden');
+}
+
+function startRound2Question4() { 
+    document.getElementById('round2-question#3').classList.add('hidden');
+    document.getElementById('round2-question#4').classList.remove('hidden');
+}
+
+function startRound2Question5() { 
+    document.getElementById('round2-question#4').classList.add('hidden');
+    document.getElementById('round2-question#5').classList.remove('hidden');
+}
+
+function startRound2Question6() { 
+    document.getElementById('round2-question#5').classList.add('hidden');
+    document.getElementById('round2-question#6').classList.remove('hidden');
+}
+
+function startRound2Question7() { 
+    document.getElementById('round2-question#6').classList.add('hidden');
+    document.getElementById('round2-question#7').classList.remove('hidden');
+}
+
+function showRound3() {
+    document.getElementById('round2-question#7').classList.add('hidden');
+    document.getElementById('round3-intro').classList.remove('hidden');
+    document.getElementById('round2').classList.add('hidden');
+    document.getElementById('round3').classList.remove('hidden');
+}
+function startTimer(timerId, startBtnId, showAnswerBtnId, correctAnswerId) {
+  let timer = 1; // Установим таймер на 30 секунд
   const timerElement = document.getElementById(timerId);
   const backgroundMusic = document.getElementById('background-music');
   backgroundMusic.play();
@@ -108,6 +144,7 @@ function startTimer(timerId, startBtnId, showAnswerBtnId) {
     timerElement.textContent = `0:${timer < 10 ? '0' : ''}${timer}`;
     if (timer === 0) {
       clearInterval(intervalId);
+      highlightCorrectAnswer(correctAnswerId);
       backgroundMusic.pause();
       document.getElementById(startBtnId).classList.add('hidden');
       document.getElementById(showAnswerBtnId).classList.remove('hidden');
@@ -115,9 +152,21 @@ function startTimer(timerId, startBtnId, showAnswerBtnId) {
   }, 1000);
 }
 
-function highlightCorrectAnswer() {
-  const correctAnswer = document.getElementById('correct-answer');
-  correctAnswer.classList.remove('bg-teal-700');
-  correctAnswer.classList.add('bg-green-500');
+function highlightCorrectAnswer(correctAnswerId) {
+  const correctAnswer = document.getElementById(correctAnswerId);
+  if (correctAnswer) {
+    correctAnswer.classList.remove('bg-sky-600');
+    correctAnswer.classList.add('bg-green-500');
+  } else {
+    console.error(`Element with ID "${correctAnswerId}" not found.`);
+  }
 }
 
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      const activeButton = document.querySelector('button:not(.hidden)');
+      if (activeButton) {
+        activeButton.click();
+      }
+    }
+  });
