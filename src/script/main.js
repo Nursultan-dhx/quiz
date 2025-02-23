@@ -9,10 +9,7 @@ function showGoodLuck() {
 }
 
 function showRound1() {
-    document.getElementById('good-luck').classList.add('hidden');
-    document.getElementById('round1-intro').classList.remove('hidden');
-    document.getElementById('hero').classList.add('hidden');
-    document.getElementById('round1').classList.remove('hidden');
+    window.location.href = 'round1.html';
 }
 
 function startRound1Question1() {
@@ -91,10 +88,7 @@ function showRound1End() {
 }   
 
 function showRound2() {
-    document.getElementById('round1-question#7-answer').classList.add('hidden');
-    document.getElementById('round2-intro').classList.remove('hidden');
-    document.getElementById('round1').classList.add('hidden');
-    document.getElementById('round2').classList.remove('hidden');
+    window.location.href = 'round2.html';
 }
 
 function startRound2Question1() { 
@@ -178,10 +172,7 @@ function showRound2End() {
 }   
 
 function showRound3() {
-    document.getElementById('round2-answer#7').classList.add('hidden');
-    document.getElementById('round3-intro').classList.remove('hidden');
-    document.getElementById('round2').classList.add('hidden');
-    document.getElementById('round3').classList.remove('hidden');
+    window.location.href = 'round3.html';
 }
 
 function startRound3Question1() {
@@ -315,12 +306,10 @@ function showRound3End() {
 }   
 
 function showRound4() {
-    document.getElementById('round3End').classList.add('hidden');
-    document.getElementById('round4-intro').classList.remove('hidden');
-    document.getElementById('round3').classList.add('hidden');
-    document.getElementById('round4').classList.remove('hidden');
+    window.location.href = 'round4.html';
 }
 
+// 20 30 15
 function startTimer(timerId, startBtnId, showAnswerBtnId) {
   let timer = 1; // Установим таймер на 30 секунд
   const timerElement = document.getElementById(timerId);

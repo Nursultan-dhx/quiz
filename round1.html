@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+  </head>
+  <body class="text-white bg-gray-100 flex flex-col min-h-screen">
+    <audio id="background-music" loop>
+        <source src="src/audio/quiz.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <section id="round1" class="min-h-screen bg-cover bg-center flex justify-center items-center" style="background-image: url('src/img/hero-round1.png');">
+        <!-- Round 1 Introduction -->
+        <div id="round1-intro" class="container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">1 раунд</h1>
+            <h1 class="blackberry text-center text-9xl font-light">Организация досуга</h1>
+            <button class="bg-teal-700 text-4xl w-md py-4 rounded-full font-semibold" onclick="startRound1Question1()">Начать первый раунд</button>
+        </div>
+
+        <!-- Round 1 -->
+         <!-- question#1 -->
+        <div id="round1-question#1" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-9xl font-light">1 вопрос</h1>
+            <p class="mb-4 text-6xl font-medium">Как расшифровывается аббревиатура КДД?</p>
+            <div id="start-timer-btn-1" class="flex justify-center items-center gap-x-4">
+                <div id="timer-1" class="text-6xl font-bold">0:30</div>
+                <button onclick="startTimer('timer-1', 'start-timer-btn-1', 'showAnswer-btn-1')" class="bg-teal-700 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
+            </div>
+            <button id="showAnswer-btn-1" onclick="showAnswerRound1Question1()" class="hidden bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к ответу</button>
+        </div>
+        
+        <div id="round1-question#1-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">Правильный ответ</h1>
+            <p class="mb-4 text-6xl font-medium uppercase">Клуб детского досуга</p>
+            <button onclick="startRound1Question2()" class="bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему вопросу</button>
+        </div>
+        
+        <!-- question#2-->
+        <div id="round1-question#2" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-9xl font-light">2 вопрос</h1>
+            <p class="mb-4 text-6xl font-medium">Как расшифровывается аббревиатура КДП?</p>
+            <div id="start-timer-btn-2" class="flex justify-center items-center gap-x-4">
+                <div id="timer-2" class="text-6xl font-bold">0:30</div>
+                <button onclick="startTimer('timer-2', 'start-timer-btn-2', 'showAnswer-btn-2')" class="bg-teal-700 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
+            </div>
+            <button id="showAnswer-btn-2" onclick="showAnswerRound1Question2()" class="hidden bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к ответу</button>
+        </div>
+        
+        <div id="round1-question#2-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">Правильный ответ</h1>
+            <p class="mb-4 text-6xl font-medium uppercase">Культурно-досуговая программа</p>
+            <button onclick="startRound1Question3()" class="bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему вопросу</button>
+        </div>
+
+                <!-- question#3 -->
+        <div id="round1-question#3" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-9xl font-light">3 вопрос</h1>
+            <p class="mb-4 text-6xl font-medium">Как расшифровывается аббревиатура СКУ?</p>
+            <div id="start-timer-btn-3" class="flex justify-center items-center gap-x-4">
+                <div id="timer-3" class="text-6xl font-bold">0:30</div>
+                <button onclick="startTimer('timer-3', 'start-timer-btn-3', 'showAnswer-btn-3')" class="bg-teal-700 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
+            </div>
+            <button id="showAnswer-btn-3" onclick="showAnswerRound1Question3()" class="hidden bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к ответу</button>
+        </div>
+
+        <div id="round1-question#3-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">Правильный ответ</h1>
+            <p class="mb-4 text-6xl font-medium uppercase">Социально-культурные учреждения</p>
+            <button onclick="startRound1Question4()" class="bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему вопросу</button>
+        </div>
+
+        <!-- question#4 -->
+        <div id="round1-question#4" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-9xl font-light">4 вопрос</h1>
+            <p class="mb-4 text-6xl font-medium">Как расшифровывается аббревиатура СКД?</p>
+            <div id="start-timer-btn-4" class="flex justify-center items-center gap-x-4">
+                <div id="timer-4" class="text-6xl font-bold">0:30</div>
+                <button onclick="startTimer('timer-4', 'start-timer-btn-4', 'showAnswer-btn-4')" class="bg-teal-700 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
+            </div>
+            <button id="showAnswer-btn-4" onclick="showAnswerRound1Question4()" class="hidden bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к ответу</button>
+        </div>
+
+        <div id="round1-question#4-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">Правильный ответ</h1>
+            <p class="mb-4 text-6xl font-medium uppercase">Социально-культурная деятельность</p>
+            <button onclick="startRound1Question5()" class="bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему вопросу</button>
+        </div>
+
+        <!-- question#5 -->
+        <div id="round1-question#5" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-9xl font-light">5 вопрос</h1>
+            <p class="mb-4 text-6xl font-medium">Что означает термин «Досуг»?</p>
+            <div id="start-timer-btn-5" class="flex justify-center items-center gap-x-4">
+                <div id="timer-5" class="text-6xl font-bold">0:30</div>
+                <button onclick="startTimer('timer-5', 'start-timer-btn-5', 'showAnswer-btn-5')" class="bg-teal-700 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
+            </div>
+            <button id="showAnswer-btn-5" onclick="showAnswerRound1Question5()" class="hidden bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к ответу</button>
+        </div>
+
+        <div id="round1-question#5-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">Правильный ответ</h1>
+            <p class="mb-4 text-6xl font-medium uppercase">Свободное время, используемое для отдыха, развлечений, саморазвития</p>
+            <button onclick="startRound1Question6()" class="bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему вопросу</button>
+        </div>
+
+        <!-- question#6 -->
+        <div id="round1-question#6" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-9xl font-light">6 вопрос</h1>
+            <p class="mb-4 text-6xl font-medium">Отдых бывает:</p>
+            <div id="start-timer-btn-6" class="flex justify-center items-center gap-x-4">
+                <div id="timer-6" class="text-6xl font-bold">0:30</div>
+                <button onclick="startTimer('timer-6', 'start-timer-btn-6', 'showAnswer-btn-6')" class="bg-teal-700 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
+            </div>
+            <button id="showAnswer-btn-6" onclick="showAnswerRound1Question6()" class="hidden bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к ответу</button>
+        </div>
+
+        <div id="round1-question#6-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">Правильный ответ</h1>
+            <p class="mb-4 text-6xl font-medium uppercase">Активный и пассивный</p>
+            <button onclick="startRound1Question7()" class="bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему вопросу</button>
+        </div>
+
+        <!-- question#7 -->
+        <div id="round1-question#7" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-9xl font-light">7 вопрос</h1>
+            <p class="mb-4 text-5xl font-medium">Сон, медитация, чтение, просмотр фильмов, прослушивание музыки, SPA-процедуры, принятие ванны, релаксация на природе, прогулки без физической нагрузки – это всё к какому отдыху относится?</p>
+            <div id="start-timer-btn-7" class="flex justify-center items-center gap-x-4">
+                <div id="timer-7" class="text-6xl font-bold">0:30</div>
+                <button onclick="startTimer('timer-7', 'start-timer-btn-7', 'showAnswer-btn-7')" class="bg-teal-700 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
+            </div>
+            <button id="showAnswer-btn-7" onclick="showAnswerRound1Question7()" class="hidden bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к ответу</button>
+        </div>
+
+        <div id="round1-question#7-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">Правильный ответ</h1>
+            <p class="mb-4 text-6xl font-medium uppercase">Пассивному отдыху</p>
+            <button onclick="showRound1End()" class="bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Закончить раунд</button>
+        </div>
+
+        <!-- round#1 end -->
+        <div id="round1End" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">Раунд окончен</h1>
+            <p class="mb-4 text-6xl font-medium uppercase">Сдаем бланки</p>
+            <button onclick="showRound2()" class="bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти ко второму раунду</button>
+        </div>
+    </section>
+
+    <script src="src/script/main.js"></script>
+  </body>
+</html>

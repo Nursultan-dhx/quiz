@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+  </head>
+  <body class="text-white bg-gray-100 flex flex-col min-h-screen">
+    <audio id="background-music" loop>
+        <source src="src/audio/quiz.m4a" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <section id="round4" class=" min-h-screen bg-cover bg-center flex justify-center items-center" style="background-image: url('src/img/hero-round4.png');">
+          <!-- Round 4 Introduction -->
+          <div id="round4-intro" class=" container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+              <h1 class="blackberry text-center text-8xl font-light uppercase">4 раунд</h1>
+              <h1 class="blackberry text-center text-9xl font-light">Организация досуга</h1>
+              <button class="bg-sky-500 text-4xl w-md py-4 rounded-full font-semibold" onclick="startRound1Question1()">Начать первый раунд</button>
+          </div>
+
+     <!-- round#4 end -->
+         <div id="round4End" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">Раунд окончен</h1>
+            <p class="mb-4 text-6xl font-medium uppercase">Сдаем бланки</p>
+            <button onclick="showRound5()" class="bg-amber-300 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к четвертому раунду</button>
+        </div>
+    </section>
+
+    <script src="src/script/main.js"></script>
+  </body>
+</html>
