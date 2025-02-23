@@ -132,8 +132,13 @@ function startRound2Question7() {
     document.getElementById('round2-question#7').classList.remove('hidden');
 }
 
-function showRound2Answer1() { 
+function showRound2Answers() {
     document.getElementById('round2-question#7').classList.add('hidden');
+    document.getElementById('round2-answer').classList.remove('hidden');
+}   
+
+function showRound2Answer1() { 
+    document.getElementById('round2-answer').classList.add('hidden');
     document.getElementById('round2-answer#1').classList.remove('hidden');
 }
 
@@ -167,11 +172,153 @@ function showRound2Answer7() {
     document.getElementById('round2-answer#7').classList.remove('hidden');
 }
 
+function showRound2End() {
+    document.getElementById('round2-question#7').classList.add('hidden');
+    document.getElementById('round2End').classList.remove('hidden');
+}   
+
 function showRound3() {
     document.getElementById('round2-answer#7').classList.add('hidden');
     document.getElementById('round3-intro').classList.remove('hidden');
     document.getElementById('round2').classList.add('hidden');
     document.getElementById('round3').classList.remove('hidden');
+}
+
+function startRound3Question1() {
+    document.getElementById('round3-intro').classList.add('hidden');
+    document.getElementById('round3-question#1').classList.remove('hidden');
+}
+
+function startRound3Question2() {
+    document.getElementById('round3-question#1').classList.add('hidden');
+    document.getElementById('round3-question#2').classList.remove('hidden');
+}
+
+function startRound3Question3() {
+    document.getElementById('round3-question#2').classList.add('hidden');
+    document.getElementById('round3-question#3').classList.remove('hidden');
+}
+
+function startRound3Question4() {
+    document.getElementById('round3-question#3').classList.add('hidden');
+    document.getElementById('round3-question#4').classList.remove('hidden');
+}
+
+function startRound3Question5() {
+    document.getElementById('round3-question#4').classList.add('hidden');
+    document.getElementById('round3-question#5').classList.remove('hidden');
+}
+
+function startRound3Question6() {
+    document.getElementById('round3-question#5').classList.add('hidden');
+    document.getElementById('round3-question#6').classList.remove('hidden');
+}
+
+function startRound3Question7() {
+    document.getElementById('round3-question#6').classList.add('hidden');
+    document.getElementById('round3-question#7').classList.remove('hidden');
+}
+
+function startRound3Question8() {
+    document.getElementById('round3-question#7').classList.add('hidden');
+    document.getElementById('round3-question#8').classList.remove('hidden');
+}
+
+function startRound3Question9() {
+    document.getElementById('round3-question#8').classList.add('hidden');
+    document.getElementById('round3-question#9').classList.remove('hidden');
+}
+
+function startRound3Question10() {
+    document.getElementById('round3-question#9').classList.add('hidden');
+    document.getElementById('round3-question#10').classList.remove('hidden');
+}
+
+function startRound3Question11() {
+    document.getElementById('round3-question#10').classList.add('hidden');
+    document.getElementById('round3-question#11').classList.remove('hidden');
+}
+
+function startRound3Question12() {
+    document.getElementById('round3-question#11').classList.add('hidden');
+    document.getElementById('round3-question#12').classList.remove('hidden');
+}
+
+function showRound3Answers() {
+    document.getElementById('round3-question#12').classList.add('hidden');
+    document.getElementById('round3-answer').classList.remove('hidden');
+}   
+
+function showRound3Question1Answer() {
+    document.getElementById('round3-answer').classList.add('hidden');
+    document.getElementById('round3-question#1answer').classList.remove('hidden');
+}
+
+function showRound3Question2Answer() {
+    document.getElementById('round3-question#1answer').classList.add('hidden');
+    document.getElementById('round3-question#2answer').classList.remove('hidden');
+}
+
+function showRound3Question3Answer() {
+    document.getElementById('round3-question#2answer').classList.add('hidden');
+    document.getElementById('round3-question#3answer').classList.remove('hidden');
+}
+
+function showRound3Question4Answer() {
+    document.getElementById('round3-question#3answer').classList.add('hidden');
+    document.getElementById('round3-question#4answer').classList.remove('hidden');
+}
+
+function showRound3Question5Answer() {
+    document.getElementById('round3-question#4answer').classList.add('hidden');
+    document.getElementById('round3-question#5answer').classList.remove('hidden');
+}
+
+function showRound3Question6Answer() {
+    document.getElementById('round3-question#5answer').classList.add('hidden');
+    document.getElementById('round3-question#6answer').classList.remove('hidden');
+}
+
+function showRound3Question7Answer() {
+    document.getElementById('round3-question#6answer').classList.add('hidden');
+    document.getElementById('round3-question#7answer').classList.remove('hidden');
+}
+
+function showRound3Question8Answer() {
+    document.getElementById('round3-question#7answer').classList.add('hidden');
+    document.getElementById('round3-question#8answer').classList.remove('hidden');
+}
+
+function showRound3Question9Answer() {
+    document.getElementById('round3-question#8answer').classList.add('hidden');
+    document.getElementById('round3-question#9answer').classList.remove('hidden');
+}
+
+function showRound3Question10Answer() {
+    document.getElementById('round3-question#9answer').classList.add('hidden');
+    document.getElementById('round3-question#10answer').classList.remove('hidden');
+}
+
+function showRound3Question11Answer() {
+    document.getElementById('round3-question#10answer').classList.add('hidden');
+    document.getElementById('round3-question#11answer').classList.remove('hidden');
+}
+
+function showRound3Question12Answer() {
+    document.getElementById('round3-question#11answer').classList.add('hidden');
+    document.getElementById('round3-question#12answer').classList.remove('hidden');
+}
+
+function showRound3End() {
+    document.getElementById('round3-question#12answer').classList.add('hidden');
+    document.getElementById('round3End').classList.remove('hidden');
+}   
+
+function showRound4() {
+    document.getElementById('round3End').classList.add('hidden');
+    document.getElementById('round4-intro').classList.remove('hidden');
+    document.getElementById('round3').classList.add('hidden');
+    document.getElementById('round4').classList.remove('hidden');
 }
 
 function startTimer(timerId, startBtnId, showAnswerBtnId) {
