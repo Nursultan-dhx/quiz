@@ -85,6 +85,11 @@ function showAnswerRound1Question7() {
     document.getElementById('round1-question#7-answer').classList.remove('hidden');
 }   
 
+function showRound1End() {
+    document.getElementById('round1-question#7-answer').classList.add('hidden');
+    document.getElementById('round1End').classList.remove('hidden');
+}   
+
 function showRound2() {
     document.getElementById('round1-question#7-answer').classList.add('hidden');
     document.getElementById('round2-intro').classList.remove('hidden');
@@ -170,7 +175,7 @@ function showRound3() {
 }
 
 function startTimer(timerId, startBtnId, showAnswerBtnId) {
-  let timer = 70; // Установим таймер на 30 секунд
+  let timer = 1; // Установим таймер на 30 секунд
   const timerElement = document.getElementById(timerId);
   const backgroundMusic = document.getElementById('background-music');
   backgroundMusic.currentTime = 0; // Сбросим время воспроизведения на начало
