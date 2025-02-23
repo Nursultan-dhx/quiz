@@ -17,68 +17,73 @@ function startRound1Question1() {
     document.getElementById('round1-question#1').classList.remove('hidden');
 }
 
-function showAnswerRound1Question1() {
-    document.getElementById('round1-question#1').classList.add('hidden');
-    document.getElementById('round1-question#1-answer').classList.remove('hidden');
-}   
-
 function startRound1Question2() {
-    document.getElementById('round1-question#1-answer').classList.add('hidden');
+    document.getElementById('round1-question#1').classList.add('hidden');
     document.getElementById('round1-question#2').classList.remove('hidden');
 }
-    
-function showAnswerRound1Question2() {
-    document.getElementById('round1-question#2').classList.add('hidden');
-    document.getElementById('round1-question#2-answer').classList.remove('hidden');
-}   
 
 function startRound1Question3() {
-    document.getElementById('round1-question#2-answer').classList.add('hidden');
+    document.getElementById('round1-question#2').classList.add('hidden');
     document.getElementById('round1-question#3').classList.remove('hidden');
 }
-    
-function showAnswerRound1Question3() {
-    document.getElementById('round1-question#3').classList.add('hidden');
-    document.getElementById('round1-question#3-answer').classList.remove('hidden');
-}   
 
 function startRound1Question4() {
-    document.getElementById('round1-question#3-answer').classList.add('hidden');
+    document.getElementById('round1-question#3').classList.add('hidden');
     document.getElementById('round1-question#4').classList.remove('hidden');
 }
-    
-function showAnswerRound1Question4() {
-    document.getElementById('round1-question#4').classList.add('hidden');
-    document.getElementById('round1-question#4-answer').classList.remove('hidden');
-}   
 
 function startRound1Question5() {
-    document.getElementById('round1-question#4-answer').classList.add('hidden');
+    document.getElementById('round1-question#4').classList.add('hidden');
     document.getElementById('round1-question#5').classList.remove('hidden');
 }
-    
-function showAnswerRound1Question5() {
-    document.getElementById('round1-question#5').classList.add('hidden');
-    document.getElementById('round1-question#5-answer').classList.remove('hidden');
-}   
 
 function startRound1Question6() {
-    document.getElementById('round1-question#5-answer').classList.add('hidden');
+    document.getElementById('round1-question#5').classList.add('hidden');
     document.getElementById('round1-question#6').classList.remove('hidden');
 }
-    
-function showAnswerRound1Question6() {
-    document.getElementById('round1-question#6').classList.add('hidden');
-    document.getElementById('round1-question#6-answer').classList.remove('hidden');
-}   
 
 function startRound1Question7() {
-    document.getElementById('round1-question#6-answer').classList.add('hidden');
+    document.getElementById('round1-question#6').classList.add('hidden');
     document.getElementById('round1-question#7').classList.remove('hidden');
 }
+
+function showRound1Answers() {
+    document.getElementById('round1-question#7').classList.add('hidden');
+    document.getElementById('round1-answer').classList.remove('hidden');
+}   
+
+function showAnswerRound1Question1() {
+    document.getElementById('round1-answer').classList.add('hidden');
+    document.getElementById('round1-question#1-answer').classList.remove('hidden');
+}   
+    
+function showAnswerRound1Question2() {
+    document.getElementById('round1-question#1-answer').classList.add('hidden');
+    document.getElementById('round1-question#2-answer').classList.remove('hidden');
+}   
+    
+function showAnswerRound1Question3() {
+    document.getElementById('round1-question#2-answer').classList.add('hidden');
+    document.getElementById('round1-question#3-answer').classList.remove('hidden');
+}   
+    
+function showAnswerRound1Question4() {
+    document.getElementById('round1-question#3-answer').classList.add('hidden');
+    document.getElementById('round1-question#4-answer').classList.remove('hidden');
+}   
+    
+function showAnswerRound1Question5() {
+    document.getElementById('round1-question#4-answer').classList.add('hidden');
+    document.getElementById('round1-question#5-answer').classList.remove('hidden');
+}   
+    
+function showAnswerRound1Question6() {
+    document.getElementById('round1-question#5-answer').classList.add('hidden');
+    document.getElementById('round1-question#6-answer').classList.remove('hidden');
+}   
     
 function showAnswerRound1Question7() {
-    document.getElementById('round1-question#7').classList.add('hidden');
+    document.getElementById('round1-question#6-answer').classList.add('hidden');
     document.getElementById('round1-question#7-answer').classList.remove('hidden');
 }   
 
@@ -309,9 +314,162 @@ function showRound4() {
     window.location.href = 'round4.html';
 }
 
-// 20 30 15
-function startTimer(timerId, startBtnId, showAnswerBtnId) {
-  let timer = 1; // Установим таймер на 30 секунд
+function startRound4Question1() {
+    document.getElementById('round4-intro').classList.add('hidden');
+    document.getElementById('round4-question#1').classList.remove('hidden');
+}
+
+function startRound4Question2() {
+    document.getElementById('round4-question#1').classList.add('hidden');
+    document.getElementById('round4-question#2').classList.remove('hidden');
+}
+
+function startRound4Question3() {
+    document.getElementById('round4-question#2').classList.add('hidden');
+    document.getElementById('round4-question#3').classList.remove('hidden');
+}
+
+function startRound4Question4() {
+    document.getElementById('round4-question#3').classList.add('hidden');
+    document.getElementById('round4-question#4').classList.remove('hidden');
+}
+
+function startRound4Question5() {
+    document.getElementById('round4-question#4').classList.add('hidden');
+    document.getElementById('round4-question#5').classList.remove('hidden');
+}
+
+function startRound4Question6() {
+    document.getElementById('round4-question#5').classList.add('hidden');
+    document.getElementById('round4-question#6').classList.remove('hidden');
+}
+
+function showRound4Answers() {
+    document.getElementById('round4-question#6').classList.add('hidden');
+    document.getElementById('round4-answer').classList.remove('hidden');
+}   
+
+function showAnswerRound4Question1() {
+    document.getElementById('round4-answer').classList.add('hidden');
+    document.getElementById('round4-question#1-answer').classList.remove('hidden');
+}   
+    
+function showAnswerRound4Question2() {
+    document.getElementById('round4-question#1-answer').classList.add('hidden');
+    document.getElementById('round4-question#2-answer').classList.remove('hidden');
+}   
+    
+function showAnswerRound4Question3() {
+    document.getElementById('round4-question#2-answer').classList.add('hidden');
+    document.getElementById('round4-question#3-answer').classList.remove('hidden');
+}   
+    
+function showAnswerRound4Question4() {
+    document.getElementById('round4-question#3-answer').classList.add('hidden');
+    document.getElementById('round4-question#4-answer').classList.remove('hidden');
+}   
+    
+function showAnswerRound4Question5() {
+    document.getElementById('round4-question#4-answer').classList.add('hidden');
+    document.getElementById('round4-question#5-answer').classList.remove('hidden');
+}   
+    
+function showAnswerRound4Question6() {
+    document.getElementById('round4-question#5-answer').classList.add('hidden');
+    document.getElementById('round4-question#6-answer').classList.remove('hidden');
+}   
+
+function showRound4End() {
+    document.getElementById('round4-question#6-answer').classList.add('hidden');
+    document.getElementById('round4End').classList.remove('hidden');
+}   
+
+function showRound5() {
+    window.location.href = 'round5.html';
+}
+
+function startRound5Question1() {
+    document.getElementById('round5-intro').classList.add('hidden');
+    document.getElementById('round5-question#1').classList.remove('hidden');
+}
+
+function startRound5Question2() {
+    document.getElementById('round5-question#1').classList.add('hidden');
+    document.getElementById('round5-question#2').classList.remove('hidden');
+}
+
+function startRound5Question3() {
+    document.getElementById('round5-question#2').classList.add('hidden');
+    document.getElementById('round5-question#3').classList.remove('hidden');
+}
+
+function startRound5Question4() {
+    document.getElementById('round5-question#3').classList.add('hidden');
+    document.getElementById('round5-question#4').classList.remove('hidden');
+}
+
+function startRound5Question5() {
+    document.getElementById('round5-question#4').classList.add('hidden');
+    document.getElementById('round5-question#5').classList.remove('hidden');
+}
+
+function startRound5Question6() {
+    document.getElementById('round5-question#5').classList.add('hidden');
+    document.getElementById('round5-question#6').classList.remove('hidden');
+}
+
+function startRound5Question7() {
+    document.getElementById('round5-question#6').classList.add('hidden');
+    document.getElementById('round5-question#7').classList.remove('hidden');
+}
+
+function showRound5Answers() {
+    document.getElementById('round5-question#7').classList.add('hidden');
+    document.getElementById('round5-answer').classList.remove('hidden');
+}   
+
+function showAnswerRound5Question1() {
+    document.getElementById('round5-answer').classList.add('hidden');
+    document.getElementById('round5-question#1-answer').classList.remove('hidden');
+}   
+    
+function showAnswerRound5Question2() {
+    document.getElementById('round5-question#1-answer').classList.add('hidden');
+    document.getElementById('round5-question#2-answer').classList.remove('hidden');
+}   
+    
+function showAnswerRound5Question3() {
+    document.getElementById('round5-question#2-answer').classList.add('hidden');
+    document.getElementById('round5-question#3-answer').classList.remove('hidden');
+}   
+    
+function showAnswerRound5Question4() {
+    document.getElementById('round5-question#3-answer').classList.add('hidden');
+    document.getElementById('round5-question#4-answer').classList.remove('hidden');
+}   
+    
+function showAnswerRound5Question5() {
+    document.getElementById('round5-question#4-answer').classList.add('hidden');
+    document.getElementById('round5-question#5-answer').classList.remove('hidden');
+}   
+    
+function showAnswerRound5Question6() {
+    document.getElementById('round5-question#5-answer').classList.add('hidden');
+    document.getElementById('round5-question#6-answer').classList.remove('hidden');
+}   
+
+function showAnswerRound5Question7() {
+    document.getElementById('round5-question#6-answer').classList.add('hidden');
+    document.getElementById('round5-question#7-answer').classList.remove('hidden');
+}   
+
+function showRound5End() {
+    document.getElementById('round5-question#7-answer').classList.add('hidden');
+    document.getElementById('round5End').classList.remove('hidden');
+}   
+
+function startTimer(timerId, startBtnId, showAnswerBtnId, duration) {
+  let timer = duration; // Установим таймер на 30 секунд
   const timerElement = document.getElementById(timerId);
   const backgroundMusic = document.getElementById('background-music');
   backgroundMusic.currentTime = 0; // Сбросим время воспроизведения на начало
