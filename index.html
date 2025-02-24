@@ -14,10 +14,10 @@
   </head>
   <body class="text-white bg-gray-100 flex flex-col min-h-screen">
 
-    <section id="hero" class="min-h-screen bg-cover bg-center flex justify-center items-center">
+    <main id="hero" class="min-h-screen bg-cover bg-center flex justify-center items-center">
         <!-- Game Title -->
         <!--------- Osmo [https://osmo.supply/] --------->
-        <div class="parallax">
+        <div id="game-start" class="parallax">
           <section class="parallax__header">
             <div class="parallax__visuals">
               <div class="parallax__black-line-overflow"></div>
@@ -25,31 +25,30 @@
                 <img src="src/img/hero.png" loading="eager" data-parallax-layer="1" alt="" class="parallax__layer-img">
                 <img src="src/img/hero-png.png" loading="eager" width="800" data-parallax-layer="2" alt="" class="parallax__layer-img">
                 <div data-parallax-layer="3" class="parallax__layer-title">
-                  <h2 class="parallax__title">Parallax</h2>
+                  <div class="parallax__title text-white">
+                    <img class="w-50 h-50 rounded-full overflow-hidden mx-auto" src="./src/img/logo.png" alt="Game Logo"/>
+                    <div>
+                      <h1 class="blackberry text-8xl font-light h-15">Quiz</h1>
+                      <h1 class="blackberry text-9xl font-bold drop-shadow-2xl">Территория досуга</h1>
+                    </div>
+                    <button class="bg-amber-400 text-4xl w-sm py-4 rounded-full font-semibold shadow-2xl" onclick="showGoodLuck()">Начать игру</button>
+                  </div>
                 </div>
               </div>
               <div class="parallax__fade"></div>
             </div>
           </section>
-          <section class="parallax__content">
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewbox="0 0 160 160" fill="none" class="osmo-icon-svg"><path d="M94.8284 53.8578C92.3086 56.3776 88 54.593 88 51.0294V0H72V59.9999C72 66.6273 66.6274 71.9999 60 71.9999H0V87.9999H51.0294C54.5931 87.9999 56.3777 92.3085 53.8579 94.8283L18.3431 130.343L29.6569 141.657L65.1717 106.142C67.684 103.63 71.9745 105.396 72 108.939V160L88.0001 160L88 99.9999C88 93.3725 93.3726 87.9999 100 87.9999H160V71.9999H108.939C105.407 71.9745 103.64 67.7091 106.12 65.1938L106.142 65.1716L141.657 29.6568L130.343 18.3432L94.8284 53.8578Z" fill="currentColor"></path></svg>
+          <section class="parallax__content flex-col bg-gradient-to-r from-amber-400 from-10% to-yellow-300 to-90% text-white">
+            <h2 class="blackberry text-9xl font-light text-center drop-shadow-2xl">Правила игры</h2>
+            <ol class="list-decimal pl-9 text-4xl/12 font-medium">
+                <li>Квиз состоиз из 5 раундов</li>
+                <li>Каждый раунд ограничен по времени</li>
+                <li>Пользоваться мобильными телефонами строго запрещено!!!</li>
+                <li>Проявляем уважение к каждому участнику команды</li>
+                <li>Наличие отличного настроения- обязательно!!! </li>
+            </ol>
+            <h2 class="blackberry text-6xl mt-5 text-center w-6xl drop-shadow-2xl">И запомните, что главное не победа, а участие в нашем квизе!!!</h2>
           </section>
-        </div>
-
-        <!-- Game Rules -->
-        <div id="game-rules" class="hidden container text-center flex flex-col justify-between min-h-screen py-10">
-            <div class="w-full text-left">
-                <h2 class="blackberry text-9xl font-light text-center">Правила игры</h2>
-                <ol class="list-decimal pl-9 text-4xl/12 font-medium">
-                    <li>Наличие отличного настроения обязательно</li>
-                    <li>5 раундов, на каждый раунд даётся определённое время</li>
-                    <li>Пользоваться мобильными телефонами строго запрещено!!!</li>
-                </ol>
-            </div>
-            <div class="flex flex-col items-center gap-y-6">
-                <p class="text-6xl font-semibold text-center">Главное не победа, а участие!</p>
-                <button class="bg-sky-500 text-5xl w-xs py-2 rounded-full font-semibold" onclick="showGoodLuck()">Далее</button>
-            </div>    
         </div>
 
         <!-- Message -->
@@ -58,7 +57,7 @@
             <h1 class="blackberry text-center text-8xl font-light">Желаем командам - удачи!<br> Мы начинаем!!!</h1>
             <button class="bg-sky-500 text-4xl w-md py-4 rounded-full font-semibold" onclick="showRound1()">Перейти к 1 раунду</button>
         </div>
-    </section>
+      </main>
 
     <script src="src/script/main.js"></script>
     <script src="src/script/parallax.js"></script>

@@ -8,8 +8,7 @@ function navigateTo(page) {
 }
 
 // Game flow functions
-function showRules() { toggleVisibility('game-start', 'game-rules'); }
-function showGoodLuck() { toggleVisibility('game-rules', 'good-luck'); }
+function showGoodLuck() { toggleVisibility('game-start', 'good-luck'); }
 function showRound1() { navigateTo('round1.html'); }
 function showRound2() { navigateTo('round2.html'); }
 function showRound3() { navigateTo('round3.html'); }
