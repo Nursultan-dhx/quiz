@@ -114,7 +114,7 @@ function showAnswerRound5Question7() { toggleVisibility('round5-question#6-answe
 function showRound5End() { toggleVisibility('round5-question#7-answer', 'round5End'); }
 
 function startTimer(timerId, startBtnId, showAnswerBtnId, duration) {
-    let timer = duration;
+    let timer = 5;
     const timerElement = document.getElementById(timerId);
     const timerMusic = document.getElementById('timer-music');
     const drumMusic = document.getElementById('drum-music');
@@ -141,8 +141,28 @@ function startTimer(timerId, startBtnId, showAnswerBtnId, duration) {
     }, 1000);
 }
 
-// Ensure background music plays on page load
 window.addEventListener('load', () => {
     const backgroundMusic = document.getElementById('background-music');
-    backgroundMusic.play();
+
+    // Попытка воспроизведения музыки при загрузке страницы
+    const playMusic = () => {
+        backgroundMusic.play().catch(error => {
+            console.log('Автовоспроизведение заблокировано. Ожидание взаимодействия пользователя...');
+        });
+    };
+
+    // Попытка воспроизведения сразу при загрузке
+    playMusic();
+
+    // Добавляем обработчик события для воспроизведения при первом взаимодействии пользователя
+    const handleUserInteraction = () => {
+        playMusic();
+        window.removeEventListener('click', handleUserInteraction);
+        window.removeEventListener('keydown', handleUserInteraction);
+        window.removeEventListener('touchstart', handleUserInteraction);
+    };
+
+    window.addEventListener('click', handleUserInteraction);
+    window.addEventListener('keydown', handleUserInteraction);
+    window.addEventListener('touchstart', handleUserInteraction);
 });
