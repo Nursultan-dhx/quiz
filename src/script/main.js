@@ -23,16 +23,15 @@ function startRound1Question4() { toggleVisibility('round1-question#3', 'round1-
 function startRound1Question5() { toggleVisibility('round1-question#4', 'round1-question#5'); }
 function startRound1Question6() { toggleVisibility('round1-question#5', 'round1-question#6'); }
 function startRound1Question7() { toggleVisibility('round1-question#6', 'round1-question#7'); }
-function showRound1Answers() { toggleVisibility('round1-question#7', 'round1-answer'); }
-function showAnswerRound1Question1() { toggleVisibility('round1-answer', 'round1-question#1-answer'); }
+function showRound1End() { toggleVisibility('round1-question#7', 'round1End'); }
+function showAnswerRound1Question1() { toggleVisibility('round1End', 'round1-question#1-answer'); }
 function showAnswerRound1Question2() { toggleVisibility('round1-question#1-answer', 'round1-question#2-answer'); }
 function showAnswerRound1Question3() { toggleVisibility('round1-question#2-answer', 'round1-question#3-answer'); }
 function showAnswerRound1Question4() { toggleVisibility('round1-question#3-answer', 'round1-question#4-answer'); }
 function showAnswerRound1Question5() { toggleVisibility('round1-question#4-answer', 'round1-question#5-answer'); }
 function showAnswerRound1Question6() { toggleVisibility('round1-question#5-answer', 'round1-question#6-answer'); }
 function showAnswerRound1Question7() { toggleVisibility('round1-question#6-answer', 'round1-question#7-answer'); }
-function showRound1End() { toggleVisibility('round1-question#7-answer', 'round1End'); }
-
+function showRound1Answers() { toggleVisibility('round1-question#7', 'round1-answer'); }
 // Round 2
 function startRound2Question1() { toggleVisibility('round2-intro', 'round2-question#1'); }
 function startRound2Question2() { toggleVisibility('round2-question#1', 'round2-question#2'); }
@@ -41,15 +40,15 @@ function startRound2Question4() { toggleVisibility('round2-question#3', 'round2-
 function startRound2Question5() { toggleVisibility('round2-question#4', 'round2-question#5'); }
 function startRound2Question6() { toggleVisibility('round2-question#5', 'round2-question#6'); }
 function startRound2Question7() { toggleVisibility('round2-question#6', 'round2-question#7'); }
-function showRound2Answers() { toggleVisibility('round2-question#7', 'round2-answer'); }
-function showRound2Answer1() { toggleVisibility('round2-answer', 'round2-answer#1'); }
+function showRound2End() { toggleVisibility('round2-question#7', 'round2End'); }
+function showRound2Answer1() { toggleVisibility('round2End', 'round2-answer#1'); }
 function showRound2Answer2() { toggleVisibility('round2-answer#1', 'round2-answer#2'); }
 function showRound2Answer3() { toggleVisibility('round2-answer#2', 'round2-answer#3'); }
 function showRound2Answer4() { toggleVisibility('round2-answer#3', 'round2-answer#4'); }
 function showRound2Answer5() { toggleVisibility('round2-answer#4', 'round2-answer#5'); }
 function showRound2Answer6() { toggleVisibility('round2-answer#5', 'round2-answer#6'); }
 function showRound2Answer7() { toggleVisibility('round2-answer#6', 'round2-answer#7'); }
-function showRound2End() { toggleVisibility('round2-question#7', 'round2End'); }
+
 
 // Round 3
 function startRound3Question1() { toggleVisibility('round3-intro', 'round3-question#1'); }
@@ -64,8 +63,8 @@ function startRound3Question9() { toggleVisibility('round3-question#8', 'round3-
 function startRound3Question10() { toggleVisibility('round3-question#9', 'round3-question#10'); }
 function startRound3Question11() { toggleVisibility('round3-question#10', 'round3-question#11'); }
 function startRound3Question12() { toggleVisibility('round3-question#11', 'round3-question#12'); }
-function showRound3Answers() { toggleVisibility('round3-question#12', 'round3-answer'); }
-function showRound3Question1Answer() { toggleVisibility('round3-answer', 'round3-question#1answer'); }
+function showRound3End() { toggleVisibility('round3-question#12', 'round3End'); }
+function showRound3Question1Answer() { toggleVisibility('round3End', 'round3-question#1answer'); }
 function showRound3Question2Answer() { toggleVisibility('round3-question#1answer', 'round3-question#2answer'); }
 function showRound3Question3Answer() { toggleVisibility('round3-question#2answer', 'round3-question#3answer'); }
 function showRound3Question4Answer() { toggleVisibility('round3-question#3answer', 'round3-question#4answer'); }
@@ -77,7 +76,6 @@ function showRound3Question9Answer() { toggleVisibility('round3-question#8answer
 function showRound3Question10Answer() { toggleVisibility('round3-question#9answer', 'round3-question#10answer'); }
 function showRound3Question11Answer() { toggleVisibility('round3-question#10answer', 'round3-question#11answer'); }
 function showRound3Question12Answer() { toggleVisibility('round3-question#11answer', 'round3-question#12answer'); }
-function showRound3End() { toggleVisibility('round3-question#12answer', 'round3End'); }
 
 // Round 4
 function startRound4Question1() { toggleVisibility('round4-intro', 'round4-question#1'); }
@@ -86,14 +84,13 @@ function startRound4Question3() { toggleVisibility('round4-question#2', 'round4-
 function startRound4Question4() { toggleVisibility('round4-question#3', 'round4-question#4'); }
 function startRound4Question5() { toggleVisibility('round4-question#4', 'round4-question#5'); }
 function startRound4Question6() { toggleVisibility('round4-question#5', 'round4-question#6'); }
-function showRound4Answers() { toggleVisibility('round4-question#6', 'round4-answer'); }
-function showAnswerRound4Question1() { toggleVisibility('round4-answer', 'round4-question#1-answer'); }
+function showRound4End() { toggleVisibility('round4-question#6', 'round4End'); }
+function showAnswerRound4Question1() { toggleVisibility('round4End', 'round4-question#1-answer'); }
 function showAnswerRound4Question2() { toggleVisibility('round4-question#1-answer', 'round4-question#2-answer'); }
 function showAnswerRound4Question3() { toggleVisibility('round4-question#2-answer', 'round4-question#3-answer'); }
 function showAnswerRound4Question4() { toggleVisibility('round4-question#3-answer', 'round4-question#4-answer'); }
 function showAnswerRound4Question5() { toggleVisibility('round4-question#4-answer', 'round4-question#5-answer'); }
 function showAnswerRound4Question6() { toggleVisibility('round4-question#5-answer', 'round4-question#6-answer'); }
-function showRound4End() { toggleVisibility('round4-question#6-answer', 'round4End'); }
 
 // Round 5
 function startRound5Question1() { toggleVisibility('round5-intro', 'round5-question#1'); }
@@ -103,15 +100,14 @@ function startRound5Question4() { toggleVisibility('round5-question#3', 'round5-
 function startRound5Question5() { toggleVisibility('round5-question#4', 'round5-question#5'); }
 function startRound5Question6() { toggleVisibility('round5-question#5', 'round5-question#6'); }
 function startRound5Question7() { toggleVisibility('round5-question#6', 'round5-question#7'); }
-function showRound5Answers() { toggleVisibility('round5-question#7', 'round5-answer'); }
-function showAnswerRound5Question1() { toggleVisibility('round5-answer', 'round5-question#1-answer'); }
+function showRound5End() { toggleVisibility('round5-question#7', 'round5End'); }
+function showAnswerRound5Question1() { toggleVisibility('round5End', 'round5-question#1-answer'); }
 function showAnswerRound5Question2() { toggleVisibility('round5-question#1-answer', 'round5-question#2-answer'); }
 function showAnswerRound5Question3() { toggleVisibility('round5-question#2-answer', 'round5-question#3-answer'); }
 function showAnswerRound5Question4() { toggleVisibility('round5-question#3-answer', 'round5-question#4-answer'); }
 function showAnswerRound5Question5() { toggleVisibility('round5-question#4-answer', 'round5-question#5-answer'); }
 function showAnswerRound5Question6() { toggleVisibility('round5-question#5-answer', 'round5-question#6-answer'); }
 function showAnswerRound5Question7() { toggleVisibility('round5-question#6-answer', 'round5-question#7-answer'); }
-function showRound5End() { toggleVisibility('round5-question#7-answer', 'round5End'); }
 
 function startTimer(timerId, startBtnId, showAnswerBtnId, duration) {
     let timer = 1;

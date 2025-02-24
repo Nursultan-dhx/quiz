@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правила</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/parallax.css" />
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+</head>
+<body>
+    <main id="hero" class="min-h-screen bg-cover bg-center flex justify-center items-center" style="background-image: url('src/img/hero.png');">
+        <div id="game-start" >
+            <section class="parallax__content flex-col text-white" style="margin-top: 0;">
+                <h2 class="blackberry text-9xl font-light text-center drop-shadow-2xl">Правила игры</h2>
+                <ol class="PPNeueCorpWide list-decimal pl-9 text-3xl/12 font-medium">
+                    <li>Квиз состоиз из 5 раундов</li>
+                    <li>Каждый раунд ограничен по времени</li>
+                    <li>Пользоваться мобильными телефонами строго запрещено!!!</li>
+                    <li>Проявляем уважение к каждому участнику команды</li>
+                    <li>Наличие отличного настроения- обязательно!!! </li>
+                </ol>
+                <h2 class="blackberry text-6xl/12 mt-5 text-center w-6xl drop-shadow-2xl">И запомните, что главное не победа, а участие в нашем квизе!!!</h2>
+                <button class="bg-amber-400 text-4xl w-sm py-4 rounded-full font-semibold shadow-2xl mt-5 PPNeueCorpWide" onclick="showGoodLuck()">Далее</button>
+            </section>
+        </div>
+            
+        <!-- Message -->
+        <div id="good-luck" class="hidden container flex flex-col items-center gap-y-10 text-white">
+            <h1 class="blackberry text-center text-8xl/18 font-light ">Желаем командам - удачи!<br> Мы начинаем!!!</h1>
+            <button class="PPNeueCorpWide bg-amber-400 text-3xl w-md py-4 rounded-full font-bold shadow-2xl" onclick="showRound1()">Перейти к 1 раунду</button>
+        </div>
+
+    </main>
+    
+    <script src="src/script/main.js"></script>
+    <script src="src/script/parallax.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
+</body>
+</html>
