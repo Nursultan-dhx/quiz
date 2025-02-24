@@ -114,25 +114,35 @@ function showAnswerRound5Question7() { toggleVisibility('round5-question#6-answe
 function showRound5End() { toggleVisibility('round5-question#7-answer', 'round5End'); }
 
 function startTimer(timerId, startBtnId, showAnswerBtnId, duration) {
-    let timer = 1;
+    let timer = duration;
     const timerElement = document.getElementById(timerId);
+    const timerMusic = document.getElementById('timer-music');
+    const drumMusic = document.getElementById('drum-music');
     const backgroundMusic = document.getElementById('background-music');
-    const drumMusic = document.getElementById('drum-music'); // Добавляем элемент для drum.mp3
-    backgroundMusic.currentTime = 0;
-    backgroundMusic.play();
+    
+    backgroundMusic.volume = 0; // Уменьшаем громкость фоновой музыки
+    timerMusic.currentTime = 0;
+    timerMusic.play();
     timerElement.textContent = `0:${timer < 10 ? '0' : ''}${timer}`;
     const intervalId = setInterval(() => {
         timer--;
         timerElement.textContent = `0:${timer < 10 ? '0' : ''}${timer}`;
         if (timer === 4) {
-            backgroundMusic.pause(); // Останавливаем основную музыку
-            drumMusic.currentTime = 0; // Сбрасываем время воспроизведения drum.mp3
-            drumMusic.play(); // Воспроизводим drum.mp3
+            timerMusic.pause();
+            drumMusic.currentTime = 0;
+            drumMusic.play();
         }
         if (timer === 0) {
             clearInterval(intervalId);
-            drumMusic.pause(); // Останавливаем drum.mp3
+            drumMusic.pause();
+            backgroundMusic.volume = 1; // Восстанавливаем громкость фоновой музыки
             toggleVisibility(startBtnId, showAnswerBtnId);
         }
     }, 1000);
 }
+
+// Ensure background music plays on page load
+window.addEventListener('load', () => {
+    const backgroundMusic = document.getElementById('background-music');
+    backgroundMusic.play();
+});
