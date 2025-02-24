@@ -114,7 +114,7 @@ function showAnswerRound5Question7() { toggleVisibility('round5-question#6-answe
 function showRound5End() { toggleVisibility('round5-question#7-answer', 'round5End'); }
 
 function startTimer(timerId, startBtnId, showAnswerBtnId, duration) {
-    let timer = 5;
+    let timer = 1;
     const timerElement = document.getElementById(timerId);
     const timerMusic = document.getElementById('timer-music');
     const drumMusic = document.getElementById('drum-music');

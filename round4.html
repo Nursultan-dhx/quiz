@@ -24,9 +24,10 @@
           <source src="src/audio/drum.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
       </audio>
-      <section id="round4" class="min-h-screen bg-cover bg-center flex justify-center items-center" style="background-image: url('src/img/hero-round4.png');">
+      <section id="round4" class="min-h-screen bg-cover bg-center flex justify-center items-center" style="z-index: 2; background-image: url('src/img/hero-round4.png');">
+        <canvas style="z-index: 1;"></canvas>
         <!-- Round 1 Introduction -->
-        <div id="round4-intro" class="container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round4-intro" class="question-holder container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">4 раунд</h1>
             <h1 class="blackberry text-center text-9xl font-light">Организация досуга</h1>
             <button class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-2xl py-4 rounded-full drop-shadow-2xl" onclick="startRound4Question1()">Начать первый раунд</button>
@@ -34,7 +35,7 @@
 
         <!-- Round 1 -->
          <!-- question#1 -->
-        <div id="round4-question#1" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round4-question#1" class="question-holder hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-9xl font-light">1 вопрос</h1>
             <p class="mb-4 text-6xl font-medium">Что такое социология досуга?</p>
             <div id="start-timer-btn-1" class="flex justify-center items-center gap-x-4">
@@ -45,7 +46,7 @@
         </div>
         
         <!-- question#2-->
-        <div id="round4-question#2" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round4-question#2" class="question-holder hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-9xl font-light">2 вопрос</h1>
             <p class="mb-4 text-6xl font-medium">Назовите типы социально-культурных учреждений в Республике Казахстан:</p>
             <div id="start-timer-btn-2" class="flex justify-center items-center gap-x-4">
@@ -56,7 +57,7 @@
         </div>
         
         <!-- question#3 -->
-        <div id="round4-question#3" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round4-question#3" class="question-holder hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-9xl font-light">3 вопрос</h1>
             <p class="mb-4 text-6xl font-medium">Что такое Аксиология досуга?</p>
             <div id="start-timer-btn-3" class="flex justify-center items-center gap-x-4">
@@ -67,7 +68,7 @@
         </div>
         
         <!-- question#4 -->
-        <div id="round4-question#4" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round4-question#4" class="question-holder hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-9xl font-light">4 вопрос</h1>
             <p class="mb-4 text-6xl font-medium">Средства СКД делятся на 6 групп, какие?</p>
             <div id="start-timer-btn-4" class="flex justify-center items-center gap-x-4">
@@ -78,7 +79,7 @@
         </div>
         
         <!-- question#5 -->
-        <div id="round4-question#5" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round4-question#5" class="question-holder hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-9xl font-light">5 вопрос</h1>
             <p class="mb-4 text-6xl font-medium">Что такое тематический вечер?</p>
             <div id="start-timer-btn-5" class="flex justify-center items-center gap-x-4">
@@ -89,7 +90,7 @@
         </div>
         
         <!-- question#6 -->
-        <div id="round4-question#6" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round4-question#6" class="question-holder hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-9xl font-light">6 вопрос</h1>
             <p class="mb-4 text-6xl font-medium">Перечислите функции досуга:</p>
             <div id="start-timer-btn-6" class="flex justify-center items-center gap-x-4">
@@ -100,13 +101,13 @@
         </div>
         
         <!-- Answers -->
-        <div id="round4-answer" class="hidden container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round4-answer" class="question-holder hidden container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">Внимание</h1>
             <h1 class="blackberry text-center text-8xl font-light">Ответы на вопросы</h1>
             <button class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-md py-4 rounded-full drop-shadow-2xl" onclick="showAnswerRound4Question1()">Перейти к ответу</button>
         </div>
         
-        <div id="round4-question#1-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round4-question#1-answer" class="question-holder hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">1 вопрос</h1>
             <div>
                 <p class="mb-4 text-6xl font-medium">Что такое социология досуга?</p>
@@ -115,7 +116,7 @@
             <button onclick="showAnswerRound4Question2()" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к следующему ответу</button>
         </div>
         
-        <div id="round4-question#2-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round4-question#2-answer" class="question-holder hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">2 вопрос</h1>
             <div>
                 <p class="mb-4 text-6xl font-medium">Назовите типы социально-культурных учреждений в Республике Казахстан:</p>
@@ -124,7 +125,7 @@
             <button onclick="showAnswerRound4Question3()" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к следующему ответу</button>
         </div>
         
-        <div id="round4-question#3-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round4-question#3-answer" class="question-holder hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">3 вопрос</h1>
             <div>
                 <p class="mb-4 text-6xl font-medium">Что такое Аксиология досуга?</p>
@@ -133,7 +134,7 @@
             <button onclick="showAnswerRound4Question4()" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к следующему ответу</button>
         </div>
         
-        <div id="round4-question#4-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round4-question#4-answer" class="question-holder hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">4 вопрос</h1>
             <div>
                 <p class="mb-4 text-6xl font-medium">Средства СКД делятся на 6 групп, какие?</p>
@@ -142,7 +143,7 @@
             <button onclick="showAnswerRound4Question5()" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к следующему ответу</button>
         </div>
         
-        <div id="round4-question#5-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round4-question#5-answer" class="question-holder hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">5 вопрос</h1>
             <div>
                 <p class="mb-4 text-6xl font-medium">Что такое тематический вечер?</p>
@@ -151,7 +152,7 @@
             <button onclick="showAnswerRound4Question6()" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к следующему ответу</button>
         </div>
         
-        <div id="round4-question#6-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round4-question#6-answer" class="question-holder hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">6 вопрос</h1>
             <div>
                 <p class="mb-4 text-6xl font-medium">Перечислите функции досуга</p>
@@ -161,13 +162,13 @@
         </div>
         
         <!-- round#4 end -->
-        <div id="round4End" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round4End" class="question-holder hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">Раунд окончен</h1>
             <p class="blackberry mb-4 text-9xl/12 font-bold">Сдаем бланки</p>
             <button onclick="showRound5()" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к пятому раунду</button>
         </div>
     </section>
-
+    <script src="src/script/bg-animation.js"></script>
     <script src="src/script/main.js"></script>
     <script src="src/script/confetti.js"></script>
   </body>

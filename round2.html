@@ -24,9 +24,11 @@
           <source src="src/audio/drum.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
       </audio>
-      <section id="round2" class="min-h-screen bg-cover bg-center flex justify-center items-center" style="background-image: url('src/img/hero-round2.png');">
+      <section id="round2" class="min-h-screen bg-cover bg-center flex justify-center items-center" style="z-index: 2; background-image: url('src/img/hero-round2.png');">
+        <canvas style="z-index: 1;"></canvas>
+
         <!-- Round 2 Introduction -->
-        <div id="round2-intro" class="container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round2-intro" class="question-holder container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">2 раунд</h1>
             <h1 class="blackberry text-center text-9xl/16 font-light">ДОСУГайся, если сможешь</h1>
             <button class="bg-red-600 text-5xl w-3xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl" onclick="startRound2Question1()">Начать первый раунд</button>
@@ -34,7 +36,7 @@
 
         <!-- Round 2 -->
         <!-- question#1 -->
-        <div id="round2-question#1" class="hidden container text-center">
+        <div id="round2-question#1" class="question-holder hidden container text-center">
             <h1 class="blackberry text-center text-9xl/22 font-light">1 вопрос</h1>
             <p class="my-8 text-4xl font-medium">Какая из перечисленных видов деятельности является массовой формой досуга?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
@@ -51,7 +53,7 @@
         </div>
 
         <!-- question#2 -->
-        <div id="round2-question#2" class="hidden container text-center">
+        <div id="round2-question#2" class="question-holder hidden container text-center">
             <h1 class="blackberry text-center text-9xl/22 font-light">2 вопрос</h1>
             <p class="my-8 text-4xl font-medium">Что включает в себя культурно-досуговая деятельность?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
@@ -68,7 +70,7 @@
         </div>
 
         <!-- question#3 -->
-        <div id="round2-question#3" class="hidden container text-center">
+        <div id="round2-question#3" class="question-holder hidden container text-center">
             <h1 class="blackberry text-center text-9xl/22 font-light">3 вопрос</h1>
             <p class="my-8 text-4xl font-medium">Какую цель преследуют культурно-досуговые учреждения?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
@@ -85,7 +87,7 @@
         </div>
 
         <!-- question#4 -->
-        <div id="round2-question#4" class="hidden container text-center">
+        <div id="round2-question#4" class="question-holder hidden container text-center">
             <h1 class="blackberry text-center text-9xl/22 font-light">4 вопрос</h1>
             <p class="my-8 text-4xl font-medium">Что относится к основным принципам организации досуга?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
@@ -102,7 +104,7 @@
         </div>
 
         <!-- question#5 -->
-        <div id="round2-question#5" class="hidden container text-center">
+        <div id="round2-question#5" class="question-holder hidden container text-center">
             <h1 class="blackberry text-center text-9xl/22 font-light">5 вопрос</h1>
             <p class="my-8 text-4xl font-medium">Как называется досуговая деятельность, направленная на развитие личности?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
@@ -119,7 +121,7 @@
         </div>
 
         <!-- question#6 -->
-        <div id="round2-question#6" class="hidden container text-center">
+        <div id="round2-question#6" class="question-holder hidden container text-center">
             <h1 class="blackberry text-center text-9xl/22 font-light">6 вопрос</h1>
             <p class="my-8 text-4xl font-medium">Найди лишнее, в индивидуальной форме КДД:</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
@@ -136,7 +138,7 @@
         </div>
 
         <!-- question#7 -->
-        <div id="round2-question#7" class="hidden container text-center">
+        <div id="round2-question#7" class="question-holder hidden container text-center">
             <h1 class="blackberry text-center text-9xl/22 font-light">7 вопрос</h1>
             <p class="my-8 text-4xl font-medium">Метод КДД это:</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
@@ -152,14 +154,14 @@
             <button id="showAnswer-btn-14" onclick="showRound2Answers()" class="hidden bg-red-600 text-3xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к ответам!</button>
         </div>
 
-        <div id="round2-answer" class="hidden container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round2-answer" class="question-holder hidden container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">Внимание</h1>
             <h1 class="blackberry text-center text-8xl font-light">Ответы на вопросы</h1>
             <button class="bg-red-600 text-6xl w-3xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl" onclick="showRound2Answer1()">Перейти к ответу</button>
         </div>
 
         <!-- answer#1 -->
-        <div id="round2-answer#1" class="hidden container text-center">
+        <div id="round2-answer#1" class="question-holder hidden container text-center">
             <h1 class="blackberry text-center text-9xl/22 font-light">1 вопрос</h1>
             <p class="my-8 text-4xl font-medium">Какая из перечисленных видов деятельности является массовой формой досуга?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
@@ -172,7 +174,7 @@
         </div>
 
         <!-- answer#2 -->
-        <div id="round2-answer#2" class="hidden container text-center">
+        <div id="round2-answer#2" class="question-holder hidden container text-center">
             <h1 class="blackberry text-center text-9xl/22 font-light">2 вопрос</h1>
             <p class="my-8 text-4xl font-medium">Что включает в себя культурно-досуговая деятельность?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
@@ -185,7 +187,7 @@
         </div>
 
         <!-- answer#3 -->
-        <div id="round2-answer#3" class="hidden container text-center">
+        <div id="round2-answer#3" class="question-holder hidden container text-center">
             <h1 class="blackberry text-center text-9xl/22 font-light">3 вопрос</h1>
             <p class="my-8 text-4xl font-medium">Какую цель преследуют культурно-досуговые учреждения?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
@@ -198,7 +200,7 @@
         </div>
 
         <!-- answer#4 -->
-        <div id="round2-answer#4" class="hidden container text-center">
+        <div id="round2-answer#4" class="question-holder hidden container text-center">
             <h1 class="blackberry text-center text-9xl/22 font-light">4 вопрос</h1>
             <p class="my-8 text-4xl font-medium">Что относится к основным принципам организации досуга?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
@@ -211,7 +213,7 @@
         </div>
 
         <!-- answer#5 -->
-        <div id="round2-answer#5" class="hidden container text-center">
+        <div id="round2-answer#5" class="question-holder hidden container text-center">
             <h1 class="blackberry text-center text-9xl/22 font-light">5 вопрос</h1>
             <p class="my-8 text-4xl font-medium">Как называется досуговая деятельность, направленная на развитие личности?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
@@ -224,7 +226,7 @@
         </div>
 
         <!-- answer#6 -->
-        <div id="round2-answer#6" class="hidden container text-center">
+        <div id="round2-answer#6" class="question-holder hidden container text-center">
             <h1 class="blackberry text-center text-9xl/22 font-light">6 вопрос</h1>
             <p class="my-8 text-4xl font-medium">Найди лишнее, в индивидуальной форме КДД:</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
@@ -237,7 +239,7 @@
         </div>
 
         <!-- answer#7 -->
-        <div id="round2-answer#7" class="hidden container text-center">
+        <div id="round2-answer#7" class="question-holder hidden container text-center">
             <h1 class="blackberry text-center text-9xl/22 font-light">7 вопрос</h1>
             <p class="my-8 text-4xl font-medium">Метод КДД это:</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
@@ -250,13 +252,14 @@
         </div>
 
         <!-- round#2 end -->
-        <div id="round2End" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+        <div id="round2End" class="question-holder hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">Раунд окончен</h1>
             <p class="mb-4 text-6xl font-medium uppercase">Сдаем бланки</p>
             <button onclick="showRound3()" class="bg-teal-700 text-4xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к третьему раунду</button>
         </div>
     </section>
-
+    
+    <script src="src/script/bg-animation.js"></script>
     <script src="src/script/main.js"></script>
     <script src="src/script/confetti.js"></script>
   </body>
