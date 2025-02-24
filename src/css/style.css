@@ -3,8 +3,20 @@
     src: url('/src/fonts/blackberry-normal_version_02.otf') format('truetype');
 }
 
+@font-face {
+    font-family: 'PP Neue Corp Wide';
+    src: url('https://cdn.prod.website-files.com/671752cd4027f01b1b8f1c7f/6717e399d30a606fed425914_PPNeueCorp-WideUltrabold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  
 .blackberry {
     font-family: 'Blackberry', sans-serif;
+}
+    
+.PPNeueCorpWide {
+    font-family: 'PP Neue Corp Wide', sans-serif;
 }
 
 button {
@@ -14,8 +26,4 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
     transition: all 0.5s ease;
-}
-    
-.PPNeueCorpWide {
-    font-family: 'PP Neue Corp Wide', sans-serif;
 }
