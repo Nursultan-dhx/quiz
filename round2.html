@@ -28,232 +28,232 @@
         <!-- Round 2 Introduction -->
         <div id="round2-intro" class="container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">2 раунд</h1>
-            <h1 class="blackberry text-center text-8xl font-light">ДОСУГайся,если сможешь</h1>
-            <button class="bg-sky-600 text-6xl w-3xl py-4 rounded-full font-semibold" onclick="startRound2Question1()">Начать первый раунд</button>
+            <h1 class="blackberry text-center text-9xl/16 font-light">ДОСУГайся, если сможешь</h1>
+            <button class="bg-red-600 text-5xl w-3xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl" onclick="startRound2Question1()">Начать первый раунд</button>
         </div>
 
         <!-- Round 2 -->
         <!-- question#1 -->
         <div id="round2-question#1" class="hidden container text-center">
-            <h1 class="blackberry text-center text-9xl font-light">1 вопрос</h1>
-            <p class="mb-4 text-4xl font-medium">Какая из перечисленных видов деятельности является массовой формой досуга?</p>
+            <h1 class="blackberry text-center text-9xl/22 font-light">1 вопрос</h1>
+            <p class="my-8 text-4xl font-medium">Какая из перечисленных видов деятельности является массовой формой досуга?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Просмотр телевизора</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Хорошее пение</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Игра в шахматы</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Занятие живописью</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Просмотр телевизора</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Хорошее пение</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Игра в шахматы</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Занятие живописью</button>
             </div>
-            <div id="start-timer-btn-8" class="flex justify-center items-center gap-x-4">
+            <div id="start-timer-btn-8" class="flex justify-center items-center gap-x-10">
                 <div id="timer-8" class="text-6xl font-bold">0:30</div>
-                <button onclick="startTimer('timer-8', 'start-timer-btn-8', 'showAnswer-btn-8', '29')" class="bg-sky-600 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
+                <button onclick="startTimer('timer-8', 'start-timer-btn-8', 'showAnswer-btn-8', '29')" class="bg-red-600 text-4xl w-md py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Запустить таймер</button>
             </div>
-            <button id="showAnswer-btn-8" onclick="startRound2Question2()" class="hidden bg-sky-600 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему вопросу</button>
+            <button id="showAnswer-btn-8" onclick="startRound2Question2()" class="hidden bg-red-600 text-3xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к следующему вопросу</button>
         </div>
 
         <!-- question#2 -->
         <div id="round2-question#2" class="hidden container text-center">
-            <h1 class="blackberry text-center text-9xl font-light">2 вопрос</h1>
-            <p class="mb-4 text-4xl font-medium">Что включает в себя культурно-досуговая деятельность?</p>
+            <h1 class="blackberry text-center text-9xl/22 font-light">2 вопрос</h1>
+            <p class="my-8 text-4xl font-medium">Что включает в себя культурно-досуговая деятельность?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Только спортивные соревнования</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Организацию и проведение мероприятий для свободного времени</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Исключительно экскурсии</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Только театральные представления</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Только спортивные соревнования</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Организацию и проведение мероприятий для свободного времени</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Исключительно экскурсии</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Только театральные представления</button>
             </div>
-            <div id="start-timer-btn-9" class="flex justify-center items-center gap-x-4">
+            <div id="start-timer-btn-9" class="flex justify-center items-center gap-x-10">
                 <div id="timer-9" class="text-6xl font-bold">0:30</div>
-                <button onclick="startTimer('timer-9', 'start-timer-btn-9', 'showAnswer-btn-9', '29')" class="bg-sky-600 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
+                <button onclick="startTimer('timer-9', 'start-timer-btn-9', 'showAnswer-btn-9', '29')" class="bg-red-600 text-4xl w-md py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Запустить таймер</button>
             </div>
-            <button id="showAnswer-btn-9" onclick="startRound2Question3()" class="hidden bg-sky-600 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему вопросу</button>
+            <button id="showAnswer-btn-9" onclick="startRound2Question3()" class="hidden bg-red-600 text-3xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к следующему вопросу</button>
         </div>
 
         <!-- question#3 -->
         <div id="round2-question#3" class="hidden container text-center">
-            <h1 class="blackberry text-center text-9xl font-light">3 вопрос</h1>
-            <p class="mb-4 text-4xl font-medium">Какую цель преследуют культурно-досуговые учреждения?</p>
+            <h1 class="blackberry text-center text-9xl/22 font-light">3 вопрос</h1>
+            <p class="my-8 text-4xl font-medium">Какую цель преследуют культурно-досуговые учреждения?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Извлечение прибыли</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Развитие творческих способностей и удовлетворение культурных потребностей населения</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Контроль над населением</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Организация общественных работ</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Извлечение прибыли</button>
+                <button class="bg-red-600 text-2xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Развитие творческих способностей и удовлетворение культурных потребностей населения</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Контроль над населением</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Организация общественных работ</button>
             </div>
-            <div id="start-timer-btn-10" class="flex justify-center items-center gap-x-4">
+            <div id="start-timer-btn-10" class="flex justify-center items-center gap-x-10">
                 <div id="timer-10" class="text-6xl font-bold">0:30</div>
-                <button onclick="startTimer('timer-10', 'start-timer-btn-10', 'showAnswer-btn-10', '29')" class="bg-sky-600 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
+                <button onclick="startTimer('timer-10', 'start-timer-btn-10', 'showAnswer-btn-10', '29')" class="bg-red-600 text-4xl w-md py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Запустить таймер</button>
             </div>
-            <button id="showAnswer-btn-10" onclick="startRound2Question4()" class="hidden bg-sky-600 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему вопросу</button>
+            <button id="showAnswer-btn-10" onclick="startRound2Question4()" class="hidden bg-red-600 text-3xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к следующему вопросу</button>
         </div>
 
         <!-- question#4 -->
         <div id="round2-question#4" class="hidden container text-center">
-            <h1 class="blackberry text-center text-9xl font-light">4 вопрос</h1>
-            <p class="mb-4 text-4xl font-medium">Что относится к основным принципам организации досуга?</p>
+            <h1 class="blackberry text-center text-9xl/22 font-light">4 вопрос</h1>
+            <p class="my-8 text-4xl font-medium">Что относится к основным принципам организации досуга?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Принуждение</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Добровольность и доступность</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Финансовая выгода</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Политическая направленность</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Принуждение</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Добровольность и доступность</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Финансовая выгода</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Политическая направленность</button>
             </div>
-            <div id="start-timer-btn-11" class="flex justify-center items-center gap-x-4">
+            <div id="start-timer-btn-11" class="flex justify-center items-center gap-x-10">
                 <div id="timer-11" class="text-6xl font-bold">0:30</div>
-                <button onclick="startTimer('timer-11', 'start-timer-btn-11', 'showAnswer-btn-11', '29')" class="bg-sky-600 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
+                <button onclick="startTimer('timer-11', 'start-timer-btn-11', 'showAnswer-btn-11', '29')" class="bg-red-600 text-4xl w-md py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Запустить таймер</button>
             </div>
-            <button id="showAnswer-btn-11" onclick="startRound2Question5()" class="hidden bg-sky-600 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему вопросу</button>
+            <button id="showAnswer-btn-11" onclick="startRound2Question5()" class="hidden bg-red-600 text-3xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к следующему вопросу</button>
         </div>
 
         <!-- question#5 -->
         <div id="round2-question#5" class="hidden container text-center">
-            <h1 class="blackberry text-center text-9xl font-light">5 вопрос</h1>
-            <p class="mb-4 text-4xl font-medium">Как называется досуговая деятельность, направленная на развитие личности?</p>
+            <h1 class="blackberry text-center text-9xl/22 font-light">5 вопрос</h1>
+            <p class="my-8 text-4xl font-medium">Как называется досуговая деятельность, направленная на развитие личности?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Развлекательная</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Познавательная</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Производственная</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Административная</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Развлекательная</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Познавательная</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Производственная</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Административная</button>
             </div>
-            <div id="start-timer-btn-12" class="flex justify-center items-center gap-x-4">
+            <div id="start-timer-btn-12" class="flex justify-center items-center gap-x-10">
                 <div id="timer-12" class="text-6xl font-bold">0:30</div>
-                <button onclick="startTimer('timer-12', 'start-timer-btn-12', 'showAnswer-btn-12', '29')" class="bg-sky-600 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
+                <button onclick="startTimer('timer-12', 'start-timer-btn-12', 'showAnswer-btn-12', '29')" class="bg-red-600 text-4xl w-md py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Запустить таймер</button>
             </div>
-            <button id="showAnswer-btn-12" onclick="startRound2Question6()" class="hidden bg-sky-600 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему вопросу</button>
+            <button id="showAnswer-btn-12" onclick="startRound2Question6()" class="hidden bg-red-600 text-3xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к следующему вопросу</button>
         </div>
 
         <!-- question#6 -->
         <div id="round2-question#6" class="hidden container text-center">
-            <h1 class="blackberry text-center text-9xl font-light">6 вопрос</h1>
-            <p class="mb-4 text-4xl font-medium">Найди лишнее, в индивидуальной форме КДД:</p>
+            <h1 class="blackberry text-center text-9xl/22 font-light">6 вопрос</h1>
+            <p class="my-8 text-4xl font-medium">Найди лишнее, в индивидуальной форме КДД:</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Беседа</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Праздник</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Фестиваль</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Интервью</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Беседа</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Праздник</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Фестиваль</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Интервью</button>
             </div>
-            <div id="start-timer-btn-13" class="flex justify-center items-center gap-x-4">
+            <div id="start-timer-btn-13" class="flex justify-center items-center gap-x-10">
                 <div id="timer-13" class="text-6xl font-bold">0:30</div>
-                <button onclick="startTimer('timer-13', 'start-timer-btn-13', 'showAnswer-btn-13', '29')" class="bg-sky-600 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
+                <button onclick="startTimer('timer-13', 'start-timer-btn-13', 'showAnswer-btn-13', '29')" class="bg-red-600 text-4xl w-md py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Запустить таймер</button>
             </div>
-            <button id="showAnswer-btn-13" onclick="startRound2Question7()" class="hidden bg-sky-600 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему вопросу</button>
+            <button id="showAnswer-btn-13" onclick="startRound2Question7()" class="hidden bg-red-600 text-3xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к следующему вопросу</button>
         </div>
 
         <!-- question#7 -->
         <div id="round2-question#7" class="hidden container text-center">
-            <h1 class="blackberry text-center text-9xl font-light">7 вопрос</h1>
-            <p class="mb-4 text-4xl font-medium">Метод КДД это:</p>
+            <h1 class="blackberry text-center text-9xl/22 font-light">7 вопрос</h1>
+            <p class="my-8 text-4xl font-medium">Метод КДД это:</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Пути достижения поставленной цели, способы и приемы практической реализации деятельности</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Средство реализации творческих идей</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Вид массового мероприятия</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Инструменты, эмоционального воздействия на аудиторию</button>
+                <button class="bg-red-600 text-2xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Пути достижения поставленной цели, способы и приемы практической реализации деятельности</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Средство реализации творческих идей</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Вид массового мероприятия</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Инструменты, эмоционального воздействия на аудиторию</button>
             </div>
-            <div id="start-timer-btn-14" class="flex justify-center items-center gap-x-4">
+            <div id="start-timer-btn-14" class="flex justify-center items-center gap-x-10">
                 <div id="timer-14" class="text-6xl font-bold">0:30</div>
-                <button onclick="startTimer('timer-14', 'start-timer-btn-14', 'showAnswer-btn-14', '29')" class="bg-sky-600 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
+                <button onclick="startTimer('timer-14', 'start-timer-btn-14', 'showAnswer-btn-14', '29')" class="bg-red-600 text-4xl w-md py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Запустить таймер</button>
             </div>
-            <button id="showAnswer-btn-14" onclick="showRound2Answers()" class="hidden bg-sky-600 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к ответам!</button>
+            <button id="showAnswer-btn-14" onclick="showRound2Answers()" class="hidden bg-red-600 text-3xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к ответам!</button>
         </div>
 
         <div id="round2-answer" class="hidden container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">Внимание</h1>
             <h1 class="blackberry text-center text-8xl font-light">Ответы на вопросы</h1>
-            <button class="bg-sky-600 text-6xl w-3xl py-4 rounded-full font-semibold" onclick="showRound2Answer1()">Перейти к ответу</button>
+            <button class="bg-red-600 text-6xl w-3xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl" onclick="showRound2Answer1()">Перейти к ответу</button>
         </div>
 
         <!-- answer#1 -->
         <div id="round2-answer#1" class="hidden container text-center">
-            <h1 class="blackberry text-center text-9xl font-light">1 вопрос</h1>
-            <p class="mb-4 text-4xl font-medium">Какая из перечисленных видов деятельности является массовой формой досуга?</p>
+            <h1 class="blackberry text-center text-9xl/22 font-light">1 вопрос</h1>
+            <p class="my-8 text-4xl font-medium">Какая из перечисленных видов деятельности является массовой формой досуга?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Просмотр телевизора</button>
-                <button class="bg-green-500 text-3xl w-full py-4 rounded-xl font-semibold">Хорошее пение</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Игра в шахматы</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Занятие живописью</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Просмотр телевизора</button>
+                <button class="bg-green-500 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Хорошее пение</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Игра в шахматы</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Занятие живописью</button>
             </div>
-            <button onclick="showRound2Answer2()" class="bg-sky-600 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему ответу</button>
+            <button onclick="showRound2Answer2()" class="bg-red-600 text-4xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к следующему ответу</button>
         </div>
 
         <!-- answer#2 -->
         <div id="round2-answer#2" class="hidden container text-center">
-            <h1 class="blackberry text-center text-9xl font-light">2 вопрос</h1>
-            <p class="mb-4 text-4xl font-medium">Что включает в себя культурно-досуговая деятельность?</p>
+            <h1 class="blackberry text-center text-9xl/22 font-light">2 вопрос</h1>
+            <p class="my-8 text-4xl font-medium">Что включает в себя культурно-досуговая деятельность?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Только спортивные соревнования</button>
-                <button class="bg-green-500 text-3xl w-full py-4 rounded-xl font-semibold">Организацию и проведение мероприятий для свободного времени</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Исключительно экскурсии</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Только театральные представления</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Только спортивные соревнования</button>
+                <button class="bg-green-500 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Организацию и проведение мероприятий для свободного времени</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Исключительно экскурсии</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Только театральные представления</button>
             </div>
-            <button onclick="showRound2Answer3()" class="bg-sky-600 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему ответу</button>
+            <button onclick="showRound2Answer3()" class="bg-red-600 text-4xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к следующему ответу</button>
         </div>
 
         <!-- answer#3 -->
         <div id="round2-answer#3" class="hidden container text-center">
-            <h1 class="blackberry text-center text-9xl font-light">3 вопрос</h1>
-            <p class="mb-4 text-4xl font-medium">Какую цель преследуют культурно-досуговые учреждения?</p>
+            <h1 class="blackberry text-center text-9xl/22 font-light">3 вопрос</h1>
+            <p class="my-8 text-4xl font-medium">Какую цель преследуют культурно-досуговые учреждения?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Извлечение прибыли</button>
-                <button class="bg-green-500 text-3xl w-full py-4 rounded-xl font-semibold">Развитие творческих способностей и удовлетворение культурных потребностей населения</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Контроль над населением</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Организация общественных работ</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Извлечение прибыли</button>
+                <button class="bg-green-500 text-2xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Развитие творческих способностей и удовлетворение культурных потребностей населения</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Контроль над населением</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Организация общественных работ</button>
             </div>
-            <button onclick="showRound2Answer4()" class="bg-sky-600 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему ответу</button>
+            <button onclick="showRound2Answer4()" class="bg-red-600 text-4xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к следующему ответу</button>
         </div>
 
         <!-- answer#4 -->
         <div id="round2-answer#4" class="hidden container text-center">
-            <h1 class="blackberry text-center text-9xl font-light">4 вопрос</h1>
-            <p class="mb-4 text-4xl font-medium">Что относится к основным принципам организации досуга?</p>
+            <h1 class="blackberry text-center text-9xl/22 font-light">4 вопрос</h1>
+            <p class="my-8 text-4xl font-medium">Что относится к основным принципам организации досуга?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Принуждение</button>
-                <button class="bg-green-500 text-3xl w-full py-4 rounded-xl font-semibold">Добровольность и доступность</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Финансовая выгода</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Политическая направленность</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Принуждение</button>
+                <button class="bg-green-500 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Добровольность и доступность</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Финансовая выгода</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Политическая направленность</button>
             </div>
-            <button onclick="showRound2Answer5()" class="bg-sky-600 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему ответу</button>
+            <button onclick="showRound2Answer5()" class="bg-red-600 text-4xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к следующему ответу</button>
         </div>
 
         <!-- answer#5 -->
         <div id="round2-answer#5" class="hidden container text-center">
-            <h1 class="blackberry text-center text-9xl font-light">5 вопрос</h1>
-            <p class="mb-4 text-4xl font-medium">Как называется досуговая деятельность, направленная на развитие личности?</p>
+            <h1 class="blackberry text-center text-9xl/22 font-light">5 вопрос</h1>
+            <p class="my-8 text-4xl font-medium">Как называется досуговая деятельность, направленная на развитие личности?</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Развлекательная</button>
-                <button class="bg-green-500 text-3xl w-full py-4 rounded-xl font-semibold">Познавательная</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Производственная</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Административная</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Развлекательная</button>
+                <button class="bg-green-500 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Познавательная</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Производственная</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Административная</button>
             </div>
-            <button onclick="showRound2Answer6()" class="bg-sky-600 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему ответу</button>
+            <button onclick="showRound2Answer6()" class="bg-red-600 text-4xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к следующему ответу</button>
         </div>
 
         <!-- answer#6 -->
         <div id="round2-answer#6" class="hidden container text-center">
-            <h1 class="blackberry text-center text-9xl font-light">6 вопрос</h1>
-            <p class="mb-4 text-4xl font-medium">Найди лишнее, в индивидуальной форме КДД:</p>
+            <h1 class="blackberry text-center text-9xl/22 font-light">6 вопрос</h1>
+            <p class="my-8 text-4xl font-medium">Найди лишнее, в индивидуальной форме КДД:</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Беседа</button>
-                <button class="bg-green-500 text-3xl w-full py-4 rounded-xl font-semibold">Праздник</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Фестиваль</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Интервью</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Беседа</button>
+                <button class="bg-green-500 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Праздник</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Фестиваль</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Интервью</button>
             </div>
-            <button onclick="showRound2Answer7()" class="bg-sky-600 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему ответу</button>
+            <button onclick="showRound2Answer7()" class="bg-red-600 text-4xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к следующему ответу</button>
         </div>
 
         <!-- answer#7 -->
         <div id="round2-answer#7" class="hidden container text-center">
-            <h1 class="blackberry text-center text-9xl font-light">7 вопрос</h1>
-            <p class="mb-4 text-4xl font-medium">Метод КДД это:</p>
+            <h1 class="blackberry text-center text-9xl/22 font-light">7 вопрос</h1>
+            <p class="my-8 text-4xl font-medium">Метод КДД это:</p>
             <div class="grid grid-cols-2 gap-6 mb-10">
-                <button class="bg-green-500 text-3xl w-full py-4 rounded-xl font-semibold">Пути достижения поставленной цели, способы и приемы практической реализации деятельности</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Средство реализации творческих идей</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Вид массового мероприятия</button>
-                <button class="bg-sky-600 text-3xl w-full py-4 rounded-xl font-semibold">Инструменты, эмоционального воздействия на аудиторию</button>
+                <button class="bg-green-500 text-2xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Пути достижения поставленной цели, способы и приемы практической реализации деятельности</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Средство реализации творческих идей</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Вид массового мероприятия</button>
+                <button class="bg-red-600 text-3xl/6 w-full py-4 rounded-xl PPNeueCorpWide drop-shadow-2xl">Инструменты, эмоционального воздействия на аудиторию</button>
             </div>
-            <button onclick="showRound3()" class="bg-sky-600 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему ответу</button>
+            <button onclick="showRound3()" class="bg-red-600 text-4xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к следующему ответу</button>
         </div>
 
         <!-- round#2 end -->
         <div id="round2End" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">Раунд окончен</h1>
             <p class="mb-4 text-6xl font-medium uppercase">Сдаем бланки</p>
-            <button onclick="showRound3()" class="bg-teal-700 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к третьему раунду</button>
+            <button onclick="showRound3()" class="bg-teal-700 text-4xl w-2xl py-4 rounded-full PPNeueCorpWide drop-shadow-2xl">Перейти к третьему раунду</button>
         </div>
     </section>
 

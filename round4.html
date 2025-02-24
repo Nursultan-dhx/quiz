@@ -12,7 +12,11 @@
     </style>
   </head>
   <body class="text-white bg-gray-100 flex flex-col min-h-screen">
-      <audio id="background-music" loop>
+    <audio id="background-music" loop>
+        <source src="src/audio/background-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+      <audio id="timer-music" loop>
           <source src="src/audio/quiz.m4a" type="audio/mpeg">
           Your browser does not support the audio element.
       </audio>
@@ -20,148 +24,147 @@
           <source src="src/audio/drum.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
       </audio>
-      <section id="round4" class=" min-h-screen bg-cover bg-center flex justify-center items-center" style="background-image: url('src/img/hero-round4.png');">
-          <!-- Round 4 Introduction -->
-          <div id="round4-intro" class=" container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
-              <h1 class="blackberry text-center text-8xl font-light uppercase">4 раунд</h1>
-              <h1 class="blackberry text-center text-9xl font-light">Организация досуга</h1>
-              <button class="bg-sky-500 text-4xl w-md py-4 rounded-full font-semibold" onclick="startRound4Question1()">Начать первый раунд</button>
-          </div>
+      <section id="round4" class="min-h-screen bg-cover bg-center flex justify-center items-center" style="background-image: url('src/img/hero-round4.png');">
+        <!-- Round 1 Introduction -->
+        <div id="round4-intro" class="container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">4 раунд</h1>
+            <h1 class="blackberry text-center text-9xl font-light">Организация досуга</h1>
+            <button class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-2xl py-4 rounded-full drop-shadow-2xl" onclick="startRound4Question1()">Начать первый раунд</button>
+        </div>
 
-                  <!-- Round 1 -->
+        <!-- Round 1 -->
          <!-- question#1 -->
         <div id="round4-question#1" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
-          <h1 class="blackberry text-center text-9xl font-light">1 вопрос</h1>
-          <p class="mb-4 text-6xl font-medium">Что такое социология досуга?</p>
-          <div id="start-timer-btn-1" class="flex justify-center items-center gap-x-4">
-              <div id="timer-1" class="text-6xl font-bold">0:30</div>
-              <button onclick="startTimer('timer-1', 'start-timer-btn-1', 'showAnswer-btn-1', '29')" class="bg-sky-500 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
-          </div>
-          <button id="showAnswer-btn-1" onclick="startRound4Question2()" class="hidden bg-sky-500 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему</button>
-      </div>
-      
-      <!-- question#2-->
-      <div id="round4-question#2" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
-          <h1 class="blackberry text-center text-9xl font-light">2 вопрос</h1>
-          <p class="mb-4 text-6xl font-medium">Назовите типы социально-культурных учреждений в Республике Казахстан:</p>
-          <div id="start-timer-btn-2" class="flex justify-center items-center gap-x-4">
-              <div id="timer-2" class="text-6xl font-bold">0:30</div>
-              <button onclick="startTimer('timer-2', 'start-timer-btn-2', 'showAnswer-btn-2', '29')" class="bg-sky-500 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
-          </div>
-          <button id="showAnswer-btn-2" onclick="startRound4Question3()" class="hidden bg-sky-500 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему</button>
-      </div>
-      
-      <!-- question#3 -->
-      <div id="round4-question#3" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
-          <h1 class="blackberry text-center text-9xl font-light">3 вопрос</h1>
-          <p class="mb-4 text-6xl font-medium">Что такое Аксиология досуга?</p>
-          <div id="start-timer-btn-3" class="flex justify-center items-center gap-x-4">
-              <div id="timer-3" class="text-6xl font-bold">0:30</div>
-              <button onclick="startTimer('timer-3', 'start-timer-btn-3', 'showAnswer-btn-3', '29')" class="bg-sky-500 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
-          </div>
-          <button id="showAnswer-btn-3" onclick="startRound4Question4()" class="hidden bg-sky-500 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему</button>
-      </div>
-      
-      <!-- question#4 -->
-      <div id="round4-question#4" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
-          <h1 class="blackberry text-center text-9xl font-light">4 вопрос</h1>
-          <p class="mb-4 text-6xl font-medium">Средства СКД делятся на 6 групп, какие?</p>
-          <div id="start-timer-btn-4" class="flex justify-center items-center gap-x-4">
-              <div id="timer-4" class="text-6xl font-bold">0:30</div>
-              <button onclick="startTimer('timer-4', 'start-timer-btn-4', 'showAnswer-btn-4', '29')" class="bg-sky-500 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
-          </div>
-          <button id="showAnswer-btn-4" onclick="startRound4Question5()" class="hidden bg-sky-500 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему</button>
-      </div>
-      
-      <!-- question#5 -->
-      <div id="round4-question#5" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
-          <h1 class="blackberry text-center text-9xl font-light">5 вопрос</h1>
-          <p class="mb-4 text-6xl font-medium">Что такое тематический вечер?</p>
-          <div id="start-timer-btn-5" class="flex justify-center items-center gap-x-4">
-              <div id="timer-5" class="text-6xl font-bold">0:30</div>
-              <button onclick="startTimer('timer-5', 'start-timer-btn-5', 'showAnswer-btn-5', '29')" class="bg-sky-500 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
-          </div>
-          <button id="showAnswer-btn-5" onclick="startRound4Question6()" class="hidden bg-sky-500 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему</button>
-      </div>
-      
-      <!-- question#6 -->
-      <div id="round4-question#6" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
-          <h1 class="blackberry text-center text-9xl font-light">6 вопрос</h1>
-          <p class="mb-4 text-6xl font-medium">Перечислите функции досуга:</p>
-          <div id="start-timer-btn-6" class="flex justify-center items-center gap-x-4">
-              <div id="timer-6" class="text-6xl font-bold">0:30</div>
-              <button onclick="startTimer('timer-6', 'start-timer-btn-6', 'showAnswer-btn-6', '29')" class="bg-sky-500 text-4xl w-sm py-4 rounded-full font-semibold">Запустить таймер</button>
-          </div>
-          <button id="showAnswer-btn-6" onclick="showRound4Answers()" class="hidden bg-sky-500 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему</button>
-      </div>
-      
-      <!-- Answers -->
-      <div id="round4-answer" class="hidden container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
-          <h1 class="blackberry text-center text-8xl font-light uppercase">Внимание</h1>
-          <h1 class="blackberry text-center text-8xl font-light">Ответы на вопросы</h1>
-          <button class="bg-sky-500 text-6xl w-3xl py-4 rounded-full font-semibold" onclick="showAnswerRound4Question1()">Перейти к ответам</button>
-      </div>
-      
-      <div id="round4-question#1-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
-          <h1 class="blackberry text-center text-8xl font-light uppercase">Правильный ответ #1</h1>
-          <div>
-              <p class="mb-4 text-6xl font-medium">Что такое социология досуга?</p>
-              <p class="blackberry mb-4 text-7xl font-bold text-lime-400">Раздел социологии, изучающий свободное время, его структуру, формы проведения и влияние на личность и общество.</p>
-          </div>  
-          <button onclick="showAnswerRound4Question2()" class="bg-sky-500 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему ответу</button>
-      </div>
-      
-      <div id="round4-question#2-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
-          <h1 class="blackberry text-center text-8xl font-light uppercase">Правильный ответ #2</h1>
-          <div>
-              <p class="mb-4 text-6xl font-medium">Назовите типы социально-культурных учреждений в Республике Казахстан:</p>
-              <p class="blackberry mb-4 text-7xl font-bold text-lime-400">Учреждения культуры, учреждения искусств, центры и комплексы культуры, учреждения массовой информации, учреждения рекреационно-оздоровительные, туристические учреждения, творческие союзы и объединения, коммерческие учреждения, образовательные учреждения</p>
-          </div>
-          <button onclick="showAnswerRound4Question3()" class="bg-sky-500 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему ответу</button>
-      </div>
-      
-      <div id="round4-question#3-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
-          <h1 class="blackberry text-center text-8xl font-light uppercase">Правильный ответ #3</h1>
-          <div>
-              <p class="mb-4 text-6xl font-medium">Что такое Аксиология досуга?</p>
-              <p class="blackberry mb-4 text-7xl font-bold text-lime-400">Наука или учение о ценности</p>
-          </div>
-          <button onclick="showAnswerRound4Question4()" class="bg-sky-500 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему ответу</button>
-      </div>
-      
-      <div id="round4-question#4-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
-          <h1 class="blackberry text-center text-8xl font-light uppercase">Правильный ответ #4</h1>
-          <div>
-              <p class="mb-4 text-6xl font-medium">Средства СКД делятся на 6 групп, какие?</p>
-              <p class="blackberry mb-4 text-7xl font-bold text-lime-400">Печатные,устные, наглядные, художественные, технические, комплексные</p>
-          </div>
-          <button onclick="showAnswerRound4Question5()" class="bg-sky-500 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему ответу</button>
-      </div>
-      
-      <div id="round4-question#5-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
-          <h1 class="blackberry text-center text-8xl font-light uppercase">Правильный ответ #5</h1>
-          <div>
-              <p class="mb-4 text-6xl font-medium">Что такое тематический вечер?</p>
-              <p class="blackberry mb-4 text-7xl font-bold text-lime-400">Это культурно-досуговая программа предполагающая сценарно-драматическую разработку темы, основана на документальном материале с включением реальных
-              </p>
-          </div>
-          <button onclick="showAnswerRound4Question6()" class="bg-sky-500 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему ответу</button>
-      </div>
-      
-      <div id="round4-question#6-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
-          <h1 class="blackberry text-center text-8xl font-light uppercase">Правильный ответ #6</h1>
-          <div>
-              <p class="mb-4 text-6xl font-medium">Перечислите функции досуга</p>
-              <p class="blackberry mb-4 text-7xl font-bold text-lime-400"> коммуникативная,педагогическая и воспитательная, ценностно- ориентированная; социальная; творческая; познавательная; рекреационно- гедонистическая</p>
-          </div>
-          <button onclick="showRound4End()" class="bg-sky-500 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к следующему ответу</button>
-      </div>
-      
-     <!-- round#4 end -->
-         <div id="round4End" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-9xl font-light">1 вопрос</h1>
+            <p class="mb-4 text-6xl font-medium">Что такое социология досуга?</p>
+            <div id="start-timer-btn-1" class="flex justify-center items-center gap-x-4">
+                <div id="timer-1" class="text-6xl font-bold">0:30</div>
+                <button onclick="startTimer('timer-1', 'start-timer-btn-1', 'showAnswer-btn-1', '29')" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-md py-4 rounded-full drop-shadow-2xl">Запустить таймер</button>
+            </div>
+            <button id="showAnswer-btn-1" onclick="startRound4Question2()" class="hidden bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к ответу</button>
+        </div>
+        
+        <!-- question#2-->
+        <div id="round4-question#2" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-9xl font-light">2 вопрос</h1>
+            <p class="mb-4 text-6xl font-medium">Назовите типы социально-культурных учреждений в Республике Казахстан:</p>
+            <div id="start-timer-btn-2" class="flex justify-center items-center gap-x-4">
+                <div id="timer-2" class="text-6xl font-bold">0:30</div>
+                <button onclick="startTimer('timer-2', 'start-timer-btn-2', 'showAnswer-btn-2', '29')" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-md py-4 rounded-full drop-shadow-2xl">Запустить таймер</button>
+            </div>
+            <button id="showAnswer-btn-2" onclick="startRound4Question3()" class="hidden bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к ответу</button>
+        </div>
+        
+        <!-- question#3 -->
+        <div id="round4-question#3" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-9xl font-light">3 вопрос</h1>
+            <p class="mb-4 text-6xl font-medium">Что такое Аксиология досуга?</p>
+            <div id="start-timer-btn-3" class="flex justify-center items-center gap-x-4">
+                <div id="timer-3" class="text-6xl font-bold">0:30</div>
+                <button onclick="startTimer('timer-3', 'start-timer-btn-3', 'showAnswer-btn-3', '29')" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-md py-4 rounded-full drop-shadow-2xl">Запустить таймер</button>
+            </div>
+            <button id="showAnswer-btn-3" onclick="startRound4Question4()" class="hidden bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к ответу</button>
+        </div>
+        
+        <!-- question#4 -->
+        <div id="round4-question#4" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-9xl font-light">4 вопрос</h1>
+            <p class="mb-4 text-6xl font-medium">Средства СКД делятся на 6 групп, какие?</p>
+            <div id="start-timer-btn-4" class="flex justify-center items-center gap-x-4">
+                <div id="timer-4" class="text-6xl font-bold">0:30</div>
+                <button onclick="startTimer('timer-4', 'start-timer-btn-4', 'showAnswer-btn-4', '29')" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-md py-4 rounded-full drop-shadow-2xl">Запустить таймер</button>
+            </div>
+            <button id="showAnswer-btn-4" onclick="startRound4Question5()" class="hidden bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к ответу</button>
+        </div>
+        
+        <!-- question#5 -->
+        <div id="round4-question#5" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-9xl font-light">5 вопрос</h1>
+            <p class="mb-4 text-6xl font-medium">Что такое тематический вечер?</p>
+            <div id="start-timer-btn-5" class="flex justify-center items-center gap-x-4">
+                <div id="timer-5" class="text-6xl font-bold">0:30</div>
+                <button onclick="startTimer('timer-5', 'start-timer-btn-5', 'showAnswer-btn-5', '29')" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-md py-4 rounded-full drop-shadow-2xl">Запустить таймер</button>
+            </div>
+            <button id="showAnswer-btn-5" onclick="startRound4Question6()" class="hidden bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к ответу</button>
+        </div>
+        
+        <!-- question#6 -->
+        <div id="round4-question#6" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-9xl font-light">6 вопрос</h1>
+            <p class="mb-4 text-6xl font-medium">Перечислите функции досуга:</p>
+            <div id="start-timer-btn-6" class="flex justify-center items-center gap-x-4">
+                <div id="timer-6" class="text-6xl font-bold">0:30</div>
+                <button onclick="startTimer('timer-6', 'start-timer-btn-6', 'showAnswer-btn-6', '29')" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-md py-4 rounded-full drop-shadow-2xl">Запустить таймер</button>
+            </div>
+            <button id="showAnswer-btn-6" onclick="showRound4Answers()" class="hidden bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к ответу</button>
+        </div>
+        
+        <!-- Answers -->
+        <div id="round4-answer" class="hidden container flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">Внимание</h1>
+            <h1 class="blackberry text-center text-8xl font-light">Ответы на вопросы</h1>
+            <button class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-md py-4 rounded-full drop-shadow-2xl" onclick="showAnswerRound4Question1()">Перейти к ответу</button>
+        </div>
+        
+        <div id="round4-question#1-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">1 вопрос</h1>
+            <div>
+                <p class="mb-4 text-6xl font-medium">Что такое социология досуга?</p>
+                <p class="blackberry mb-4 text-7xl/12 font-bold text-teal-300">Раздел социологии, изучающий свободное время, его структуру, формы проведения и влияние на личность и общество.</p>
+            </div>  
+            <button onclick="showAnswerRound4Question2()" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к следующему ответу</button>
+        </div>
+        
+        <div id="round4-question#2-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">2 вопрос</h1>
+            <div>
+                <p class="mb-4 text-6xl font-medium">Назовите типы социально-культурных учреждений в Республике Казахстан:</p>
+                <p class="blackberry mb-4 text-7xl/12 font-bold text-teal-300">Учреждения культуры, учреждения искусств, центры и комплексы культуры, учреждения массовой информации, учреждения рекреационно-оздоровительные, туристические учреждения, творческие союзы и объединения, коммерческие учреждения, образовательные учреждения</p>
+            </div>
+            <button onclick="showAnswerRound4Question3()" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к следующему ответу</button>
+        </div>
+        
+        <div id="round4-question#3-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">3 вопрос</h1>
+            <div>
+                <p class="mb-4 text-6xl font-medium">Что такое Аксиология досуга?</p>
+                <p class="blackberry mb-4 text-7xl/12 font-bold text-teal-300">Наука или учение о ценности</p>
+            </div>
+            <button onclick="showAnswerRound4Question4()" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к следующему ответу</button>
+        </div>
+        
+        <div id="round4-question#4-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">4 вопрос</h1>
+            <div>
+                <p class="mb-4 text-6xl font-medium">Средства СКД делятся на 6 групп, какие?</p>
+                <p class="blackberry mb-4 text-7xl/12 font-bold text-teal-300">Печатные,устные, наглядные, художественные, технические, комплексные</p>
+            </div>
+            <button onclick="showAnswerRound4Question5()" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к следующему ответу</button>
+        </div>
+        
+        <div id="round4-question#5-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">5 вопрос</h1>
+            <div>
+                <p class="mb-4 text-6xl font-medium">Что такое тематический вечер?</p>
+                <p class="blackberry mb-4 text-7xl/12 font-bold text-teal-300">Это культурно-досуговая программа предполагающая сценарно-драматическую разработку темы, основана на документальном материале с включением реальных</p>
+            </div>
+            <button onclick="showAnswerRound4Question6()" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к следующему ответу</button>
+        </div>
+        
+        <div id="round4-question#6-answer" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
+            <h1 class="blackberry text-center text-8xl font-light uppercase">6 вопрос</h1>
+            <div>
+                <p class="mb-4 text-6xl font-medium">Перечислите функции досуга</p>
+                <p class="blackberry mb-4 text-7xl/12 font-bold text-teal-300"> коммуникативная,педагогическая и воспитательная, ценностно- ориентированная; социальная; творческая; познавательная; рекреационно- гедонистическая</p>
+            </div>
+            <button onclick="showRound4End()" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к следующему ответу</button>
+        </div>
+        
+        <!-- round#4 end -->
+        <div id="round4End" class="hidden container text-center flex flex-col justify-between py-20 min-h-screen items-center gap-y-10">
             <h1 class="blackberry text-center text-8xl font-light uppercase">Раунд окончен</h1>
-            <p class="mb-4 text-6xl font-medium uppercase">Сдаем бланки</p>
-            <button onclick="showRound5()" class="bg-sky-500 text-4xl w-2xl py-4 rounded-full font-semibold">Перейти к пятому раунду</button>
+            <p class="blackberry mb-4 text-9xl/12 font-bold">Сдаем бланки</p>
+            <button onclick="showRound5()" class="bg-teal-300 PPNeueCorpWide text-4xl/8 w-3xl py-4 rounded-full drop-shadow-2xl">Перейти к пятому раунду</button>
         </div>
     </section>
 
