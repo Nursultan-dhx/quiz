@@ -110,13 +110,11 @@ function showAnswerRound5Question6() { toggleVisibility('round5-question#5-answe
 function showAnswerRound5Question7() { toggleVisibility('round5-question#6-answer', 'round5-question#7-answer'); }
 
 function startTimer(timerId, startBtnId, showAnswerBtnId, duration) {
-    let timer = 1;
+    let timer = duration;
     const timerElement = document.getElementById(timerId);
     const timerMusic = document.getElementById('timer-music');
     const drumMusic = document.getElementById('drum-music');
-    const backgroundMusic = document.getElementById('background-music');
     
-    backgroundMusic.volume = 0; // Уменьшаем громкость фоновой музыки
     timerMusic.currentTime = 0;
     timerMusic.play();
     timerElement.textContent = `0:${timer < 10 ? '0' : ''}${timer}`;
@@ -131,7 +129,6 @@ function startTimer(timerId, startBtnId, showAnswerBtnId, duration) {
         if (timer === 0) {
             clearInterval(intervalId);
             drumMusic.pause();
-            backgroundMusic.volume = 1; // Восстанавливаем громкость фоновой музыки
             toggleVisibility(startBtnId, showAnswerBtnId);
         }
     }, 1000);
