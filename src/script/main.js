@@ -8,8 +8,7 @@ function navigateTo(page) {
 }
 
 // Game flow functions
-function showRules() { toggleVisibility('game-start', 'game-rules'); }
-function showGoodLuck() { toggleVisibility('game-rules', 'good-luck'); }
+function showGoodLuck() { toggleVisibility('game-start', 'good-luck'); }
 function showRound1() { navigateTo('round1.html'); }
 function showRound2() { navigateTo('round2.html'); }
 function showRound3() { navigateTo('round3.html'); }
@@ -115,25 +114,55 @@ function showAnswerRound5Question7() { toggleVisibility('round5-question#6-answe
 function showRound5End() { toggleVisibility('round5-question#7-answer', 'round5End'); }
 
 function startTimer(timerId, startBtnId, showAnswerBtnId, duration) {
-    let timer = duration;
+    let timer = 5;
     const timerElement = document.getElementById(timerId);
+    const timerMusic = document.getElementById('timer-music');
+    const drumMusic = document.getElementById('drum-music');
     const backgroundMusic = document.getElementById('background-music');
-    const drumMusic = document.getElementById('drum-music'); // Добавляем элемент для drum.mp3
-    backgroundMusic.currentTime = 0;
-    backgroundMusic.play();
+    
+    backgroundMusic.volume = 0; // Уменьшаем громкость фоновой музыки
+    timerMusic.currentTime = 0;
+    timerMusic.play();
     timerElement.textContent = `0:${timer < 10 ? '0' : ''}${timer}`;
     const intervalId = setInterval(() => {
         timer--;
         timerElement.textContent = `0:${timer < 10 ? '0' : ''}${timer}`;
         if (timer === 4) {
-            backgroundMusic.pause(); // Останавливаем основную музыку
-            drumMusic.currentTime = 0; // Сбрасываем время воспроизведения drum.mp3
-            drumMusic.play(); // Воспроизводим drum.mp3
+            timerMusic.pause();
+            drumMusic.currentTime = 0;
+            drumMusic.play();
         }
         if (timer === 0) {
             clearInterval(intervalId);
-            drumMusic.pause(); // Останавливаем drum.mp3
+            drumMusic.pause();
+            backgroundMusic.volume = 1; // Восстанавливаем громкость фоновой музыки
             toggleVisibility(startBtnId, showAnswerBtnId);
         }
     }, 1000);
 }
+
+window.addEventListener('load', () => {
+    const backgroundMusic = document.getElementById('background-music');
+
+    // Попытка воспроизведения музыки при загрузке страницы
+    const playMusic = () => {
+        backgroundMusic.play().catch(error => {
+            console.log('Автовоспроизведение заблокировано. Ожидание взаимодействия пользователя...');
+        });
+    };
+
+    // Попытка воспроизведения сразу при загрузке
+    playMusic();
+
+    // Добавляем обработчик события для воспроизведения при первом взаимодействии пользователя
+    const handleUserInteraction = () => {
+        playMusic();
+        window.removeEventListener('click', handleUserInteraction);
+        window.removeEventListener('keydown', handleUserInteraction);
+        window.removeEventListener('touchstart', handleUserInteraction);
+    };
+
+    window.addEventListener('click', handleUserInteraction);
+    window.addEventListener('keydown', handleUserInteraction);
+    window.addEventListener('touchstart', handleUserInteraction);
+});

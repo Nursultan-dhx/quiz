@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/parallax.css" />
     <style type="text/tailwindcss">
       @theme {
         --color-clifford: #da373d;
@@ -13,38 +14,54 @@
   </head>
   <body class="text-white bg-gray-100 flex flex-col min-h-screen">
 
-    <section id="hero" class="min-h-screen bg-cover bg-center flex justify-center items-center" style="background-image: url('src/img/hero.png');">
+    <main id="hero" class="min-h-screen bg-cover bg-center flex justify-center items-center" style="background-image: url('src/img/hero.png');">
         <!-- Game Title -->
-        <div id="game-start" class="container flex flex-col items-center gap-y-8">
-            <img class="w-50 h-50 rounded-full overflow-hidden" src="./src/img/logo.png" alt="Game Logo"/>
-            <h1 class="blackberry text-9xl font-light">Организация досуга</h1>
-            <button class="bg-sky-500 text-5xl w-sm py-4 rounded-full font-semibold" onclick="showRules()">Начать игру</button>
-        </div>
-
-        <!-- Game Rules -->
-        <div id="game-rules" class="hidden container text-center flex flex-col justify-between min-h-screen py-10">
-            <div class="w-full text-left">
-                <h2 class="blackberry text-9xl font-light text-center">Правила игры</h2>
-                <ol class="list-decimal pl-9 text-4xl/12 font-medium">
-                    <li>Наличие отличного настроения обязательно</li>
-                    <li>5 раундов, на каждый раунд даётся определённое время</li>
-                    <li>Пользоваться мобильными телефонами строго запрещено!!!</li>
-                </ol>
+        <!--------- Osmo [https://osmo.supply/] --------->
+        <div id="game-start" class="parallax">
+          <section class="parallax__header">
+            <div class="parallax__visuals">
+              <div class="parallax__black-line-overflow"></div>
+              <div data-parallax-layers class="parallax__layers">
+                <img src="src/img/hero.png" loading="eager" data-parallax-layer="1" alt="" class="parallax__layer-img">
+                <img src="src/img/hero-png.png" loading="eager" width="800" data-parallax-layer="2" alt="" class="parallax__layer-img">
+                <div data-parallax-layer="3" class="parallax__layer-title">
+                  <div class="parallax__title text-white">
+                    <img class="w-50 h-50 rounded-full overflow-hidden mx-auto" src="./src/img/logo.png" alt="Game Logo"/>
+                    <div>
+                      <h1 class="blackberry text-8xl font-light h-15">Квиз</h1>
+                      <h1 class="blackberry text-9xl font-bold drop-shadow-2xl">Территория досуга</h1>
+                    </div>
+                    <button class="bg-amber-400 text-4xl w-sm py-4 rounded-full font-semibold shadow-2xl" onclick="showGoodLuck()">Начать игру</button>
+                  </div>
+                </div>
+              </div>
+              <div class="parallax__fade"></div>
             </div>
-            <div class="flex flex-col items-center gap-y-6">
-                <p class="text-6xl font-semibold text-center">Главное не победа, а участие!</p>
-                <button class="bg-sky-500 text-5xl w-xs py-2 rounded-full font-semibold" onclick="showGoodLuck()">Далее</button>
-            </div>    
+          </section>
+          <section class="parallax__content flex-col bg-gradient-to-r from-amber-400 from-10% to-yellow-300 to-90% text-white">
+            <h2 class="blackberry text-9xl font-light text-center drop-shadow-2xl">Правила игры</h2>
+            <ol class="PPNeueCorpWide list-decimal pl-9 text-3xl/12 font-medium">
+                <li>Квиз состоиз из 5 раундов</li>
+                <li>Каждый раунд ограничен по времени</li>
+                <li>Пользоваться мобильными телефонами строго запрещено!!!</li>
+                <li>Проявляем уважение к каждому участнику команды</li>
+                <li>Наличие отличного настроения- обязательно!!! </li>
+            </ol>
+            <h2 class="blackberry text-6xl/12 mt-5 text-center w-6xl drop-shadow-2xl">И запомните, что главное не победа, а участие в нашем квизе!!!</h2>
+          </section>
         </div>
 
         <!-- Message -->
-        <div id="good-luck" class="hidden container flex flex-col items-center gap-y-10">
-            <img class="w-50 h-50 rounded-full overflow-hidden" src="./src/img/logo.png" alt="Game Logo"/>
-            <h1 class="blackberry text-center text-8xl font-light">Желаем командам - удачи!<br> Мы начинаем!!!</h1>
-            <button class="bg-sky-500 text-4xl w-md py-4 rounded-full font-semibold" onclick="showRound1()">Перейти к 1 раунду</button>
+        <div id="good-luck" class="hidden container flex flex-col items-center gap-y-10 text-white">
+            <h1 class="blackberry text-center text-8xl/18 font-light ">Желаем командам - удачи!<br> Мы начинаем!!!</h1>
+            <button class="PPNeueCorpWide bg-amber-400 text-3xl w-md py-4 rounded-full font-bold shadow-2xl" onclick="showRound1()">Перейти к 1 раунду</button>
         </div>
-    </section>
+      </main>
 
     <script src="src/script/main.js"></script>
+    <script src="src/script/parallax.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
   </body>
 </html>
