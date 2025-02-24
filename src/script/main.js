@@ -114,20 +114,25 @@ function showAnswerRound5Question6() { toggleVisibility('round5-question#5-answe
 function showAnswerRound5Question7() { toggleVisibility('round5-question#6-answer', 'round5-question#7-answer'); }
 function showRound5End() { toggleVisibility('round5-question#7-answer', 'round5End'); }
 
-// Timer
 function startTimer(timerId, startBtnId, showAnswerBtnId, duration) {
     let timer = duration;
     const timerElement = document.getElementById(timerId);
     const backgroundMusic = document.getElementById('background-music');
+    const drumMusic = document.getElementById('drum-music'); // Добавляем элемент для drum.mp3
     backgroundMusic.currentTime = 0;
     backgroundMusic.play();
     timerElement.textContent = `0:${timer < 10 ? '0' : ''}${timer}`;
     const intervalId = setInterval(() => {
         timer--;
         timerElement.textContent = `0:${timer < 10 ? '0' : ''}${timer}`;
+        if (timer === 4) {
+            backgroundMusic.pause(); // Останавливаем основную музыку
+            drumMusic.currentTime = 0; // Сбрасываем время воспроизведения drum.mp3
+            drumMusic.play(); // Воспроизводим drum.mp3
+        }
         if (timer === 0) {
             clearInterval(intervalId);
-            backgroundMusic.pause();
+            drumMusic.pause(); // Останавливаем drum.mp3
             toggleVisibility(startBtnId, showAnswerBtnId);
         }
     }, 1000);
