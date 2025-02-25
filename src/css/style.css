@@ -1,7 +1,5 @@
-@font-face {
-	font-family: 'Blackberry';
-	src: url('blackberrynormal.woff2') format('woff2') url('blackberrynormal.woff') format('woff');
-}
+
+@import "https://fonts.fontstorage.com/import/blackberry.css";
 
 @font-face {
     font-family: 'PP Neue Corp Wide';
