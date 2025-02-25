@@ -117,15 +117,25 @@ function startTimer(timerId, startBtnId, showAnswerBtnId, duration) {
     
     timerMusic.currentTime = 0;
     timerMusic.play();
-    timerElement.textContent = `0:${timer < 10 ? '0' : ''}${timer}`;
+    
+    const updateTimerDisplay = () => {
+        const minutes = Math.floor(timer / 60);
+        const seconds = timer % 60;
+        timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    };
+    
+    updateTimerDisplay();
+    
     const intervalId = setInterval(() => {
         timer--;
-        timerElement.textContent = `0:${timer < 10 ? '0' : ''}${timer}`;
+        updateTimerDisplay();
+        
         if (timer === 4) {
             timerMusic.pause();
             drumMusic.currentTime = 0;
             drumMusic.play();
         }
+        
         if (timer === 0) {
             clearInterval(intervalId);
             drumMusic.pause();
