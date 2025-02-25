@@ -115,8 +115,6 @@ function startTimer(timerId, startBtnId, showAnswerBtnId, duration) {
     const timerMusic = document.getElementById('timer-music');
     const drumMusic = document.getElementById('drum-music');
     
-    let drumPlayed = false; // Флаг для отслеживания, была ли уже воспроизведена drumMusic
-
     timerMusic.currentTime = 0;
     timerMusic.play();
     
@@ -132,12 +130,10 @@ function startTimer(timerId, startBtnId, showAnswerBtnId, duration) {
         timer--;
         updateTimerDisplay();
         
-        // Воспроизводим drumMusic только один раз, когда осталось 4 секунды
-        if (timer === 4 && !drumPlayed) {
+        if (timer === 4) {
             timerMusic.pause();
             drumMusic.currentTime = 0;
             drumMusic.play();
-            drumPlayed = true; // Устанавливаем флаг, чтобы drumMusic больше не воспроизводилась
         }
         
         if (timer === 0) {

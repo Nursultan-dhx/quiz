@@ -1,6 +1,8 @@
 @font-face {
     font-family: 'Blackberry';
-    src: url('./src/fonts/blackberry-normal_version_02.otf') format('opentype');
+    src: url('./src/fonts/blackberrynormal.woff2') format('woff2'),
+        url('./src/fonts/blackberrynormal.woff') format('woff'),
+        url('./src/fonts/blackberry-normal_version_02.otf') format('opentype');
 }
 
 @font-face {
@@ -9,12 +11,12 @@
     font-weight: 800;
     font-style: normal;
     font-display: swap;
-  }
-  
+}
+
 .blackberry {
     font-family: 'Blackberry', sans-serif;
 }
-    
+
 .PPNeueCorpWide {
     font-family: 'PP Neue Corp Wide', sans-serif;
 }
@@ -22,6 +24,7 @@
 button {
     cursor: pointer;
 }
+
 button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
@@ -36,8 +39,9 @@ canvas {
     right: 0;
     left: 0;
     top: 0;
-    z-index: -1; /* Помещаем canvas под контент */
-  }
+    z-index: -1;
+    /* Помещаем canvas под контент */
+}
 
 .question-holder {
     z-index: 2;
