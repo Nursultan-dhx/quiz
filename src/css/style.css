@@ -1,8 +1,6 @@
 @font-face {
-    font-family: 'Blackberry';
-    src: url('./src/fonts/blackberrynormal.woff2') format('woff2'),
-        url('./src/fonts/blackberrynormal.woff') format('woff'),
-        url('./src/fonts/blackberry-normal_version_02.otf') format('opentype');
+	font-family: 'Blackberry';
+	src: url('blackberrynormal.woff2') format('woff2') url('blackberrynormal.woff') format('woff');
 }
 
 @font-face {
